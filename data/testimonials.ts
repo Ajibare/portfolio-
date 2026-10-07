@@ -8,7 +8,7 @@ export const testimonials: Testimonial[] = [
     id: "saaj-partners",
     quote:
       "I'm very impressed with the website Babajide delivered for SAAJ Partners and Consultants Ltd. He took the time to understand our vision, requirements, and business goals, then translated them into a clean, professional, and functional website. What stood out most was his attention to detail, professionalism, communication, and commitment throughout the project. The final website is responsive, user-friendly, visually appealing, and effectively represents our organization. I would highly recommend Babajide to any business looking for a reliable and skilled software developer. He delivered an excellent job and brought our vision to life.",
-    author: "Blessing Olumide",
+    author: "Ajibare Adeyinka",
     role: "CEO/GMD",
     company: "SAAJ Partners and Consultants Ltd.",
   },

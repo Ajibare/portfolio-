@@ -42,7 +42,7 @@ export function Testimonials() {
                 key={testimonial.id}
                 className="flex flex-col justify-between gap-8 border border-line bg-surface p-8 md:p-10"
               >
-                <blockquote className="font-display text-2xl font-medium leading-snug text-paper">
+                <blockquote className="font-display text-base font-medium leading-relaxed text-paper md:text-lg">
                   &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 <figcaption className="flex flex-col gap-1">
