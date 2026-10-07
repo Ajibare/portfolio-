@@ -9,7 +9,7 @@ Portfolio: https://portfolio-bay-seven-73.vercel.app
 
 ## Professional Summary
 
-Full-Stack Software Engineer with 2+ years shipping production applications end-to-end using React, Next.js, Node.js, and Express, plus enterprise jQuery-based systems at scale. Comfortable working async and collaborating with distributed, cross-functional teams. Experienced designing RESTful APIs, integrating third-party and payment gateway services (Paystack, Flutterwave), and implementing JWT-based authentication and authorization. Currently a Software Engineer II contributing to architecture decisions, backend/API work, and code review. Track record of measurable impact — 30% lift in user engagement, 100% on-time freelance delivery — and experience mentoring 20+ junior developers.
+Full-Stack Software Engineer with 3+ years shipping production applications end-to-end using React, Next.js, Node.js, and Express, plus enterprise jQuery-based systems at scale. Comfortable working async and collaborating with distributed, cross-functional teams. Experienced designing RESTful APIs, integrating third-party and payment gateway services (Paystack, Flutterwave), and implementing JWT-based authentication and authorization. Currently a Software Engineer II contributing to architecture decisions, backend/API work, and code review. Track record of measurable impact — 30% lift in user engagement, 100% on-time freelance delivery — and experience mentoring 50+ junior developers.
 
 ## Key Skills
 
@@ -38,7 +38,7 @@ Full-Stack Software Engineer with 2+ years shipping production applications end-
 ### Full-Stack Developer — Independent Projects | 2023 – Present
 - Designs and builds full-stack applications end-to-end — React/Next.js frontends, Node.js/Express backends.
 - Designs MongoDB and SQL data models and builds REST APIs, handling API design and third-party API integration.
-- Delivered 8+ freelance projects for global clients (business websites, portfolios, e-commerce) including payment gateway integrations, with 100% on-time delivery.
+- Delivered 10+ freelance projects for global clients (business websites, portfolios, e-commerce) including payment gateway integrations, with 100% on-time delivery.
 - Optimizes sites for SEO, boosting client rankings and organic traffic.
 
 ### Web Developer & Technical Education Instructor — Omnific Works | 2024
@@ -47,7 +47,7 @@ Full-Stack Software Engineer with 2+ years shipping production applications end-
 - Collaborated directly with stakeholders to translate requirements into functional, mobile-first designs.
 - Built and maintained WordPress and custom-coded sites — contact forms, donation flows, analytics tracking.
 - Designed and delivered a structured front-end curriculum (HTML, CSS, JavaScript, Git fundamentals).
-- Trained 20+ junior developers, improving their technical skills and delivery speed.
+- Trained 50+ junior developers, improving their technical skills and delivery speed.
 
 ### Frontend Developer — Avitech International | 2025
 - Built a responsive legal document platform from Figma designs (HTML, Bootstrap), fully remote with a distributed team.

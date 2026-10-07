@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUp, AtSign, GitFork, MessageCircle } from "lucide-react";
+import { ArrowUp, AtSign, Camera, GitFork, MessageCircle, X } from "lucide-react";
 import { navItems, site, socials } from "@/data/site";
 import { cn } from "@/lib/utils";
 
@@ -7,6 +7,8 @@ const socialIcons = {
   GitHub: GitFork,
   LinkedIn: AtSign,
   WhatsApp: MessageCircle,
+  Instagram: Camera,
+  "X (Twitter)": X,
 } as const;
 
 export function Footer() {

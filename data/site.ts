@@ -43,6 +43,14 @@ export const socials: SocialLink[] = [
     label: "WhatsApp",
     href: "https://wa.me/2348138581834",
   },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/abstack_technologies/",
+  },
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/SmartAbjob",
+  },
 ];
 
 export const anchors = {

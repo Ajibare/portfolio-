@@ -45,7 +45,7 @@ export const experience: ExperienceItem[] = [
     highlights: [
       "Building full-stack applications with React/Next.js frontends and Node.js/Express backends.",
       "Designing MongoDB and SQL data models and building REST APIs, including third-party API integration.",
-      "Delivered 8+ freelance projects for global clients — business websites, portfolios and e-commerce platforms — including payment gateway integrations, with 100% on-time delivery.",
+      "Delivered 10+ freelance projects for global clients — business websites, portfolios and e-commerce platforms — including payment gateway integrations, with 100% on-time delivery.",
       "Optimizing sites for SEO, boosting client rankings and organic traffic.",
     ],
   },
@@ -62,7 +62,7 @@ export const experience: ExperienceItem[] = [
       "Collaborated directly with NGO and business stakeholders to turn requirements into functional, mobile-first designs.",
       "Built and maintained WordPress and custom-coded sites — contact forms, donation flows and analytics tracking.",
       "Designed and delivered a structured front-end curriculum (HTML, CSS, JavaScript, Git fundamentals).",
-      "Trained 20+ junior developers, improving their technical skills and delivery speed.",
+      "Trained 50+ junior developers, improving their technical skills and delivery speed.",
     ],
   },
   {

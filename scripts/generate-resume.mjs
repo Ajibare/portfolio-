@@ -13,7 +13,7 @@ const CONTENT = {
   line2: "LinkedIn: linkedin.com/in/ajibare-babajide-94452a248",
   line3: "GitHub: github.com/Ajibare | Portfolio: portfolio-bay-seven-73.vercel.app",
   summary:
-    "Full-Stack Software Engineer with 2+ years shipping production applications end-to-end using React, Next.js, Node.js, and Express, plus enterprise jQuery-based systems at scale. Comfortable working async and collaborating with distributed, cross-functional teams. Experienced designing RESTful APIs, integrating third-party and payment gateway services (Paystack, Flutterwave), and implementing JWT-based authentication and authorization. Currently a Software Engineer II contributing to architecture decisions, backend/API work, and code review. Track record of measurable impact — 30% lift in user engagement, 100% on-time freelance delivery — and experience mentoring 20+ junior developers.",
+    "Full-Stack Software Engineer with 3+ years shipping production applications end-to-end using React, Next.js, Node.js, and Express, plus enterprise jQuery-based systems at scale. Comfortable working async and collaborating with distributed, cross-functional teams. Experienced designing RESTful APIs, integrating third-party and payment gateway services (Paystack, Flutterwave), and implementing JWT-based authentication and authorization. Currently a Software Engineer II contributing to architecture decisions, backend/API work, and code review. Track record of measurable impact — 30% lift in user engagement, 100% on-time freelance delivery — and experience mentoring 50+ junior developers.",
   skills: [
     { label: "Frontend", value: "React.js, Next.js, JavaScript (ES6+), TypeScript, jQuery, HTML5, CSS3, Bootstrap 4, Tailwind CSS" },
     { label: "Backend", value: "Node.js, Express.js, RESTful API Design, JWT Authentication & Authorization, MongoDB, SQL, Database Schema Design" },
@@ -50,7 +50,7 @@ const CONTENT = {
       bullets: [
         "Designs and builds full-stack applications end-to-end — React/Next.js frontends, Node.js/Express backends.",
         "Designs MongoDB and SQL data models and builds REST APIs, handling API design and third-party API integration.",
-        "Delivered 8+ freelance projects for global clients (business websites, portfolios, e-commerce) including payment gateway integrations, with 100% on-time delivery.",
+        "Delivered 10+ freelance projects for global clients (business websites, portfolios, e-commerce) including payment gateway integrations, with 100% on-time delivery.",
         "Optimizes sites for SEO, boosting client rankings and organic traffic.",
       ],
     },
@@ -61,7 +61,7 @@ const CONTENT = {
         "Developed responsive NGO and business websites, increasing user satisfaction by 25%.",
         "Led an e-commerce redesign that produced a 30% rise in donations.",
         "Built and maintained WordPress and custom-coded sites — contact forms, donation flows, analytics tracking.",
-        "Trained 20+ junior developers, improving their technical skills and delivery speed.",
+        "Trained 50+ junior developers, improving their technical skills and delivery speed.",
       ],
     },
     {

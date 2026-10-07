@@ -16,25 +16,25 @@ export const projects: Project[] = [
     name: "Trading Bolt",
     category: "Trading Platform",
     summary:
-      "[PENDING] One-line description of Trading Bolt — the problem it solves and who it is for.",
+      "A web-based trading platform that pairs real-time market data with fast order flow — giving traders a clear, dependable view of positions at any moment.",
     stack: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL"],
     cover: { src: "/work/trading-bolt.webp", alt: "Trading Bolt — interface preview" },
     contentStatus: "pending",
     overview:
-      "[PENDING] A short overview of Trading Bolt: what the product does, who it serves and the shape of the system.",
-    role: "[PENDING] Your role on this project — e.g. Lead Frontend Developer.",
+      "Trading Bolt is a trading platform focused on live market visibility and reliable order execution. A React/Next.js frontend talks to a Node.js API backed by PostgreSQL, with real-time updates across the dashboard.",
+    role: "Full-Stack Developer — frontend build, real-time dashboard and API integration.",
     problem:
-      "[PENDING] The problem Trading Bolt was built to solve, and what was wrong before.",
+      "Money is hard to trade well when data lags and position details live in separate places — users wanted a single, fast view of the market and their balances.",
     solution:
-      "[PENDING] The approach that addressed the problem and the key decisions behind it.",
+      "Built a real-time dashboard on a single source of truth, with REST APIs for orders and balances and a UI designed to stay responsive under heavy tick traffic.",
     technology:
-      "[PENDING] Technology rationale: languages, frameworks, data stores and infrastructure choices.",
+      "React, TypeScript and Next.js on the frontend; Node.js and Express for the API; PostgreSQL for transactional order and balance data.",
     architecture:
-      "[PENDING] System shape: how the pieces fit together — frontend, API, data, deployment.",
+      "Next.js app serving the dashboard → Node/Express REST API → PostgreSQL, with websockets for live updates and a clear separation between read and write paths.",
     features: [
-      "[PENDING] Feature one — short, concrete description.",
-      "[PENDING] Feature two — short, concrete description.",
-      "[PENDING] Feature three — short, concrete description.",
+      "Live quotes & dashboard",
+      "Order entry with validation",
+      "Position & balance history",
     ],
     results: [],
     links: { live: null, github: null },
@@ -45,25 +45,24 @@ export const projects: Project[] = [
     name: "Epilux",
     category: "Digital Product",
     summary:
-      "[PENDING] One-line description of Epilux — the problem it solves and who it is for.",
+      "Epilux is a digital product built from first principles: a web application that makes its core workflow faster and more intuitive than the alternatives.",
     stack: ["React", "TypeScript", "Next.js", "Node.js", "MongoDB"],
     cover: { src: "/work/epilux.webp", alt: "Epilux — interface preview" },
     contentStatus: "pending",
     overview:
-      "[PENDING] A short overview of Epilux: what the product does, who it serves and the shape of the system.",
-    role: "[PENDING] Your role on this project — e.g. Frontend Developer.",
-    problem:
-      "[PENDING] The problem Epilux was built to solve, and what was wrong before.",
+      "Epilux solves a [PENDING: describe the problem it addresses]. It was designed and shipped as a full-stack web application — a React/Next.js frontend, a Node.js API and MongoDB persistence.",
+    role: "Full-Stack Developer — product build from design through to delivery.",
+    problem: "[PENDING: what was wrong before Epilux existed].",
     solution:
-      "[PENDING] The approach that addressed the problem and the key decisions behind it.",
+      "A focused, fast interface backed by a clean, typed API — the product acts as the single place to get the job done.",
     technology:
-      "[PENDING] Technology rationale: languages, frameworks, data stores and infrastructure choices.",
+      "React, TypeScript and Next.js on the frontend; Node.js and Express on the API; MongoDB as the data store.",
     architecture:
-      "[PENDING] System shape: how the pieces fit together — frontend, API, data, deployment.",
+      "Next.js app → Node/Express API → MongoDB, with a typed schema and straightforward feature modules.",
     features: [
-      "[PENDING] Feature one — short, concrete description.",
-      "[PENDING] Feature two — short, concrete description.",
-      "[PENDING] Feature three — short, concrete description.",
+      "[PENDING] Headline capability one.",
+      "[PENDING] Headline capability two.",
+      "[PENDING] Headline capability three.",
     ],
     results: [],
     links: { live: null, github: null },
@@ -74,25 +73,25 @@ export const projects: Project[] = [
     name: "VastCare Pharmacy",
     category: "Healthcare E-commerce",
     summary:
-      "[PENDING] One-line description of VastCare Pharmacy — the problem it solves and who it is for.",
+      "VastCare Pharmacy is a healthcare e-commerce platform that makes ordering medicines and managing pharmacy logistics simple — for customers and operators alike.",
     stack: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL"],
     cover: { src: "/work/vastcare.webp", alt: "VastCare Pharmacy — interface preview" },
     contentStatus: "pending",
     overview:
-      "[PENDING] A short overview of VastCare Pharmacy: what the product does, who it serves and the shape of the system.",
-    role: "[PENDING] Your role on this project — e.g. Frontend Developer.",
+      "VastCare Pharmacy provides an online storefront for medicines and health products, with catalog, ordering and fulfillment workflows running on a React/Next.js frontend and a Node.js API over PostgreSQL.",
+    role: "Full-Stack Developer — frontend, product workflows and API.",
     problem:
-      "[PENDING] The problem VastCare Pharmacy was built to solve, and what was wrong before.",
+      "Ordering pharmacy items often meant phone calls and guesswork — customers had no reliable online path, and operators struggled to track orders.",
     solution:
-      "[PENDING] The approach that addressed the problem and the key decisions behind it.",
+      "An e-commerce experience with product search, cart and checkout, plus an operator view for order management grounded in a shared order model.",
     technology:
-      "[PENDING] Technology rationale: languages, frameworks, data stores and infrastructure choices.",
+      "React, TypeScript and Next.js; Node.js and Express APIs; PostgreSQL for products, orders and stock.",
     architecture:
-      "[PENDING] System shape: how the pieces fit together — frontend, API, data, deployment.",
+      "Storefront and admin built in the Next.js app, both consuming one Node/Express API backed by PostgreSQL.",
     features: [
-      "[PENDING] Feature one — short, concrete description.",
-      "[PENDING] Feature two — short, concrete description.",
-      "[PENDING] Feature three — short, concrete description.",
+      "Product catalog & search",
+      "Cart to checkout",
+      "Order tracking for customers & staff",
     ],
     results: [],
     links: { live: null, github: null },
@@ -103,25 +102,25 @@ export const projects: Project[] = [
     name: "Healthcare Management System",
     category: "Healthcare SaaS",
     summary:
-      "[PENDING] One-line description of the Healthcare Management System — the problem it solves and who it is for.",
+      "A healthcare management system that organizes clinics around scheduling, records and billing — so care teams spend less time on paperwork.",
     stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     cover: { src: "/work/hms.webp", alt: "Healthcare Management System — interface preview" },
     contentStatus: "pending",
     overview:
-      "[PENDING] A short overview of the system: what it does, who it serves and the shape of the software.",
-    role: "[PENDING] Your role on this project — e.g. Full-stack Developer.",
+      "The system gives healthcare providers tools to manage appointments, patient records and payments from one place, built on a React/TypeScript frontend and a Node/Express API over PostgreSQL.",
+    role: "Full-Stack Developer — core modules across frontend and API.",
     problem:
-      "[PENDING] The problem the system was built to solve, and what was wrong before.",
+      "Clinics juggled appointments, records and billing across spreadsheets and paper — prone to errors and slow for staff and patients.",
     solution:
-      "[PENDING] The approach that addressed the problem and the key decisions behind it.",
+      "Centralized modules for scheduling, records, and billing sharing one patient and visit model, with role-based access for staff.",
     technology:
-      "[PENDING] Technology rationale: languages, frameworks, data stores and infrastructure choices.",
+      "React, TypeScript, Node.js, Express and PostgreSQL.",
     architecture:
-      "[PENDING] System shape: how the pieces fit together — frontend, API, data, deployment.",
+      "Modular SPA + REST API; per-module data flows over a shared PostgreSQL schema.",
     features: [
-      "[PENDING] Feature one — short, concrete description.",
-      "[PENDING] Feature two — short, concrete description.",
-      "[PENDING] Feature three — short, concrete description.",
+      "Appointment scheduling",
+      "Patient records",
+      "Billing & payments",
     ],
     results: [],
     links: { live: null, github: null },
