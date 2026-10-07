@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — Ajibare Babajide
 
-## Getting Started
+Personal portfolio for **Ajibare Babajide** (Software Engineer, Nigeria) — a
+dark, editorial, single-page site with case studies, built with Next.js 16,
+TypeScript, Tailwind v4, GSAP, Framer Motion and React Three Fiber.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router, Cache Components, Partial Prefetching, Turbopack)
+- **TypeScript** · **Tailwind CSS v4**
+- **GSAP** + ScrollTrigger animations
+- **Framer Motion** (loader, mobile menu, reduced-motion aware)
+- **Three.js / @react-three/fiber** (abstract hero wireframe)
+- **react-hook-form + Zod** form validation, **Resend** for email
+- **lucide-react** icons
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command               | Purpose                                        |
+| --------------------- | ---------------------------------------------- |
+| `npm run dev`         | Development server                             |
+| `npm run build`       | Production build (lint + typecheck + prerender)|
+| `npm run start`       | Serve the production build                     |
+| `npm run lint`        | ESLint                                         |
+| `npm run cover-art`   | Regenerate project cover WebP art (sharp)      |
+| `npm run resume`      | Regenerate `public/resume/…Resume.pdf` (pdfkit)|
 
-## Learn More
+## Environment
 
-To learn more about Next.js, take a look at the following resources:
+Copy `.env.example` to `.env.local` and configure:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Variable                 | Purpose                                                    |
+| ------------------------ | ---------------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL`   | Canonical URL for metadata, sitemap and robots             |
+| `RESEND_API_KEY`         | Enables `/api/contact` email delivery                      |
+| `CONTACT_RECIPIENT`      | Where contact-form messages are sent (default: site email) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+While `RESEND_API_KEY` is unset the contact form replies with a clear
+"not configured" message so the site never fails silently.
 
-## Deploy on Vercel
+## Content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Real content is supplied by the owner — nothing is invented.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `data/projects.ts` holds the case-study copy. Fields prefixed `[PENDING]`
+  are placeholders awaiting the owner's confirmation; `results[]` is only ever
+  filled with verified metrics.
+- `data/site.ts` `socials` are rendered as disabled "URL pending" entries until
+  real profile links are added.
+- `data/testimonials.ts` is empty by design and renders an explicit
+  empty-state rather than invented praise.
+
+## Deployment
+
+Recommended: **Vercel** (zero config). Set the `NEXT_PUBLIC_SITE_URL` env var,
+then `npm run build` passes with static prerender (PPR on case studies), and the
+`/api/contact` route runs on Node.js.# portfolio-
