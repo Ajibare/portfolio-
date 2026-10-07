@@ -5,7 +5,7 @@ export interface NavItem {
 }
 
 export interface SocialLink {
-  label: "GitHub" | "LinkedIn" | "WhatsApp";
+  label: "GitHub" | "LinkedIn" | "WhatsApp" | "Instagram" | "X (Twitter)";
   href: string | null;
   note?: string;
 }
