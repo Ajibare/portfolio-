@@ -20,12 +20,25 @@ export const site = {
   copyrightYear: "2026",
   tagline:
     "Full-stack software engineer shipping production applications end-to-end with React, Next.js and Node.js.",
+  /** Navigation anchors for smooth scrolling. */
+  anchors: {
+    home: "",
+    work: "work",
+    about: "about",
+    experience: "experience",
+    services: "services",
+    testimonials: "testimonials",
+    contact: "contact",
+  },
 } as const;
 
 export const navItems: NavItem[] = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
+  { label: "Home", href: "#top" },
+  { label: "Expertise", href: "#expertise" },
   { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#work" },
+  { label: "Services", href: "#services" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ];
 

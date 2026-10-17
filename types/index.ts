@@ -94,3 +94,19 @@ export interface Project {
     github: string | null;
   };
 }
+
+/** Expertise category and panel types */
+export interface ExpertisePanel {
+  title: string;
+  description: string;
+  tags: string[];
+}
+
+export interface ExpertiseCategory {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  technologies: string[];
+  panels: ExpertisePanel[];
+}

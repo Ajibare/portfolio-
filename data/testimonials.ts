@@ -2,6 +2,8 @@ import type { Testimonial } from "@/types";
 
 /**
  * Only real, verifiable testimonials belong here. Never invent quotes.
+ * Pending slots are marked by the quote starting with "[PENDING]" and will fall back
+ * to an empty-state until the owner supplies approved wording.
  */
 export const testimonials: Testimonial[] = [
   {
@@ -44,6 +46,19 @@ export const testimonials: Testimonial[] = [
     role: "Student",
     company: "",
   },
+  // Pending slots — replace with approved testimonials when available
+  {
+    id: "client-pending-01",
+    quote: "[PENDING] — awaiting client approval",
+    author: "[PENDING]",
+    role: "",
+    company: "",
+  },
+  {
+    id: "client-pending-02",
+    quote: "[PENDING] — awaiting client approval",
+    author: "[PENDING]",
+    role: "",
+    company: "",
+  },
 ];
-
-export const testimonialsPending = testimonials.length === 0;

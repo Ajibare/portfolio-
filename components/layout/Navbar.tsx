@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { site, navItems } from "@/data/site";
+import { site, navItems, anchors } from "@/data/site";
 import { useSiteReady } from "@/lib/site-context";
 import { cn } from "@/lib/utils";
 import { NavLinks } from "@/components/layout/NavLinks";
+import { Button } from "@/components/ui/Button";
 
 export function Navbar() {
   const ready = useSiteReady();
@@ -25,7 +26,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    const ids = ["work", "about", "experience", "contact"];
+    const ids = ["work", "about", "experience", "services", "testimonials", "contact"];
     const sections = ids
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => Boolean(el));
@@ -54,7 +55,7 @@ export function Navbar() {
       menuButtonRef.current?.focus();
     }, 60);
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflow = previousOverflow ?? "";
       window.removeEventListener("keydown", onKey);
       window.clearTimeout(timer);
     };
@@ -78,10 +79,10 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-[100] transition-all duration-300 motion-reduce:transition-none",
-        scrolled && !open
-          ? "border-b border-line bg-ink/85 backdrop-blur-md"
-          : "border-b border-transparent",
+        scrolled && !open && !ready && "border-b border-line bg-ink/85 backdrop-blur-md",
         !ready && "pointer-events-none",
+        scrolled && open && "border-b border-line bg-ink/85 backdrop-blur-md",
+        !scrolled && !open && "border-b border-transparent",
       )}
     >
       <motion.nav
@@ -109,16 +110,15 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <Link
+          {/* Prominent CTA button */}
+          <Button
             href="#contact"
-            className="group hidden items-center gap-2 rounded-full border border-line px-5 py-2 font-mono text-[11px] uppercase tracking-[0.18em] transition-colors duration-300 hover:border-accent hover:text-accent motion-reduce:transition-none md:inline-flex"
-            data-cursor="click"
+            variant="primary"
+            size="md"
+            className="group inline-flex w-fit items-center gap-3 border border-accent bg-accent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wide text-ink transition-colors hover:bg-transparent hover:text-accent motion-reduce:transition-none"
           >
-            Hire Me
-            <span aria-hidden className="text-accent transition-transform duration-300 group-hover:translate-x-0.5">
-              →
-            </span>
-          </Link>
+            BOOK A CALL
+          </Button>
 
           <button
             ref={menuButtonRef}

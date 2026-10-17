@@ -7,65 +7,6 @@ import { stats } from "@/data/stats";
 import { WordReveal } from "@/components/ui/WordReveal";
 import { Reveal } from "@/components/ui/Reveal";
 
-export function About() {
-  return (
-    <section id="about" className="section-pad shell relative">
-      <div className="flex flex-col gap-4">
-        <p className="eyebrow">
-          <span className="text-accent">{"// "}</span>
-          {about.eyebrow}
-        </p>
-        <h2 className="max-w-5xl">
-          <span className="text-display block text-paper">
-            <WordReveal text="I'm a full-stack software engineer who enjoys turning" />
-          </span>
-          <span className="text-display block text-paper">
-            <WordReveal text="complex problems into" />
-          </span>
-          <span className="text-display block">
-            <span className="text-serif-accent text-accent">
-              <WordReveal text={about.highlight} />
-            </span>
-          </span>
-        </h2>
-      </div>
-
-      <div className="mt-16 grid gap-14 border-t border-line pt-14 md:grid-cols-[1.15fr_0.85fr]">
-        <div className="flex flex-col gap-8 max-w-2xl">
-          {about.bio.map((paragraph) => (
-            <Reveal key={paragraph.slice(0, 32)}>
-              <p className="text-base leading-relaxed text-muted md:text-lg">
-                {paragraph}
-              </p>
-            </Reveal>
-          ))}
-        </div>
-
-        <div>
-          <Reveal delay={0.15}>
-            <p className="eyebrow mb-6">Areas of focus</p>
-            <ul className="flex flex-col divide-y divide-line border-y border-line">
-              {about.focus.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-center justify-between gap-4 py-5"
-                >
-                  <span className="font-display text-lg font-medium text-paper uppercase tracking-tight">
-                    {item}
-                  </span>
-                  <span aria-hidden className="text-accent">
-                    →
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function StatNumber({ value, suffix }: { value: number | "∞"; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
 
@@ -103,6 +44,97 @@ function StatNumber({ value, suffix }: { value: number | "∞"; suffix?: string 
     >
       {value === "∞" ? "∞" : "0"}
     </span>
+  );
+}
+
+export function About() {
+  return (
+    <section id="about" className="section-pad shell relative">
+      <div className="flex flex-col gap-4">
+        <p className="eyebrow">
+          <span className="text-accent">{"// "}</span>
+          {about.eyebrow}
+        </p>
+        <h2 className="max-w-5xl">
+          <span className="text-display block text-paper">
+            <WordReveal text="More than code." />
+          </span>
+          <span className="text-display block text-paper">
+            <span className="text-serif-accent text-accent">
+              <WordReveal text={about.highlight} />
+            </span>
+          </span>
+          <span className="text-display block text-paper">
+            <WordReveal text="I build solutions." />
+          </span>
+        </h2>
+      </div>
+
+      <div className="mt-16 grid gap-14 border-t border-line pt-14 md:grid-cols-[1.15fr_0.85fr]">
+        <div className="flex flex-col gap-8 max-w-2xl">
+          {about.bio.map((paragraph) => (
+            <Reveal key={paragraph.slice(0, 32)}>
+              <p className="text-base leading-relaxed text-muted md:text-lg">
+                {paragraph}
+              </p>
+            </Reveal>
+          ))}
+        </div>
+
+        <div className="order-2 order-first-md">
+          <Reveal delay={0.15}>
+            <p className="eyebrow mb-6">More than code.</p>
+            <ul className="flex flex-col divide-y divide-line border-y border-line">
+              <li
+                key="lifecycle-1"
+                className="flex items-center justify-between gap-4 py-3"
+              >
+                <span className="font-display text-lg font-medium text-paper uppercase tracking-tight">
+                  Full-Stack Delivery
+                </span>
+                <span aria-hidden className="text-accent">→</span>
+              </li>
+              <li
+                key="lifecycle-2"
+                className="flex items-center justify-between gap-4 py-3"
+              >
+                <span className="font-display text-lg font-medium text-paper uppercase tracking-tight">
+                  API & Backend
+                </span>
+                <span aria-hidden className="text-accent">→</span>
+              </li>
+              <li
+                key="lifecycle-3"
+                className="flex items-center justify-between gap-4 py-3"
+              >
+                <span className="font-display text-lg font-medium text-paper uppercase tracking-tight">
+                  Database Design
+                </span>
+                <span aria-hidden className="text-accent">→</span>
+              </li>
+              <li
+                key="lifecycle-4"
+                className="flex items-center justify-between gap-4 py-3"
+              >
+                <span className="font-display text-lg font-medium text-paper uppercase tracking-tight">
+                  Deployment
+                </span>
+                <span aria-hidden className="text-accent">→</span>
+              </li>
+              <li
+                key="lifecycle-5"
+                className="flex items-center justify-between gap-4 py-3"
+              >
+                <span className="font-display text-lg font-medium text-paper uppercase tracking-tight">
+                  AI Integration
+                </span>
+                <span aria-hidden className="text-accent">→</span>
+              </li>
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
   );
 }
 

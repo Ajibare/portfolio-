@@ -4,6 +4,7 @@ import { services } from "@/data/services";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 
 export function Services() {
   return (
@@ -52,6 +53,17 @@ export function Services() {
                   </li>
                 ))}
               </ul>
+
+              <div className="mt-6">
+                <Button
+                  href="#contact"
+                  variant="primary"
+                  size="sm"
+                  className="w-full justify-center"
+                >
+                  DISCUSS YOUR PROJECT
+                </Button>
+              </div>
             </article>
           </Reveal>
         ))}

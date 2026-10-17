@@ -88,6 +88,37 @@ html.custom-cursor summary {
 }
 
 @layer components {
+  /* Hero rotating technical keywords */
+  .hero-keywords {
+    animation: keyword-rotate 15s ease-in-out infinite;
+  }
+
+  @keyframes keyword-rotate {
+    0%,
+    100% {
+      opacity: 0.8;
+    }
+    20% {
+      opacity: 1;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    60% {
+      opacity: 0.9;
+    }
+    80% {
+      opacity: 0.7;
+    }
+  }
+
+  .hero-keyword {
+    transition: opacity 0.4s ease;
+  }
+  .hero-keyword:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+
   /* Shared horizontal shell */
   .shell {
     margin-inline: auto;

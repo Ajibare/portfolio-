@@ -15,16 +15,36 @@ const Scene3D = dynamic(() => import("@/components/hero/Scene3D"), {
   loading: () => null,
 });
 
+// Technical keywords that rotate subtly using CSS animation
+const techKeywords = ["Full-Stack Engineering", "Enterprise Software", "Fintech", "AI Integration", "Product Development"];
+
+function TechnicalKeywordRotator({ reduced }: { reduced: boolean }) {
+  if (reduced) return null;
+
+  return (
+    <p
+      className="hero-keywords absolute top-6 left-1/2 -translate-x-1/2 text-accent text-xs uppercase tracking-widest opacity-80 select-none"
+      style={{
+        animation: "keyword-rotate 15s ease-in-out infinite",
+      }}
+    >
+      {techKeywords.map((kw, i) => (
+        <span key={i} className="hero-keyword">{kw}</span>
+      ))}
+    </p>
+  );
+}
+
 export function Hero() {
   const ready = useSiteReady();
-  const reduced = useReducedMotion();
+  const reduced = useReducedMotion() ?? false;
   const rootRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!ready || !rootRef.current) return;
     // Respect prefers-reduced-motion: skip the choreography, show everything.
     if (reduced) {
-      gsap.set(".hero-line, .hero-fade", { clearProps: "all" });
+      gsap.set(".hero-line, .hero-fade, .hero-scene", { clearProps: "all" });
       return;
     }
     const ctx = gsap.context(() => {
@@ -82,7 +102,7 @@ export function Hero() {
           </p>
           <span className="hidden size-1 rounded-full bg-line sm:block" aria-hidden />
           <p className="hidden font-mono text-[11px] uppercase tracking-[0.22em] text-muted sm:block">
-            {site.location} — 2026
+            {site.location} — Working Globally
           </p>
         </div>
 
@@ -101,15 +121,13 @@ export function Hero() {
           </span>
         </h1>
 
-        {/* Role */}
+        {/* Role + technical keyword rotator */}
         <div className="hero-fade mt-8 flex items-center gap-4 opacity-0 md:mt-10">
           <span className="font-mono text-[12px] uppercase tracking-[0.2em] text-accent">
             {site.role}
           </span>
           <span className="h-px w-16 bg-line" aria-hidden />
-          <span className="hidden font-mono text-[12px] uppercase tracking-[0.2em] text-muted min-[420px]:block">
-            Frontend · Full-stack
-          </span>
+          <TechnicalKeywordRotator reduced={reduced} />
         </div>
 
         {/* Statement + actions */}
@@ -120,13 +138,13 @@ export function Hero() {
 
           <div className="hero-fade flex flex-wrap items-center gap-4 opacity-0">
             <Magnetic strength={0.25}>
-              <Button href="#contact" variant="primary" size="md">
-                Hire Me
+              <Button href="#work" variant="ghost" size="md">
+                EXPLORE MY WORK
               </Button>
             </Magnetic>
             <Magnetic strength={0.2}>
-              <Button href="#work" variant="ghost" size="md">
-                View My Work
+              <Button href="#contact" variant="primary" size="md">
+                BOOK A DISCOVERY CALL
               </Button>
             </Magnetic>
             <Magnetic strength={0.2}>
@@ -143,21 +161,21 @@ export function Hero() {
             </Magnetic>
           </div>
         </div>
-      </div>
 
-      {/* Scroll cue */}
-      <div className="hero-fade shell relative z-10 mb-8 flex items-center gap-4 opacity-0">
-        <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-faint">
-          Scroll
-        </span>
-        <span className="relative block h-10 w-px overflow-hidden bg-line" aria-hidden>
-          <span className="absolute left-0 top-0 h-4 w-px animate-[cue-drop_1.8s_ease-in-out_infinite] bg-accent" />
-        </span>
-        <MoveDown
-          size={13}
-          className="text-faint"
-          aria-hidden
-        />
+        {/* Scroll cue */}
+        <div className="hero-fade shell relative z-10 mb-8 flex items-center gap-4 opacity-0">
+          <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-faint">
+            Scroll
+          </span>
+          <span className="relative block h-10 w-px overflow-hidden bg-line" aria-hidden>
+            <span className="absolute left-0 top-0 h-4 w-px animate-[cue-drop_1.8s_ease-in-out_infinite] bg-accent" />
+          </span>
+          <MoveDown
+            size={13}
+            className="text-faint"
+            aria-hidden
+          />
+        </div>
       </div>
     </section>
   );
