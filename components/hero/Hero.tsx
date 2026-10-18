@@ -16,24 +16,24 @@ const Scene3D = dynamic(() => import("@/components/hero/Scene3D"), {
 });
 
 // Technical keywords that rotate subtly using CSS animation
-const techKeywords = ["Full-Stack Engineering", "Enterprise Software", "Fintech", "AI Integration", "Product Development"];
+// const techKeywords = ["Full-Stack Engineering", "Enterprise Software", "Fintech", "AI Integration", "Product Development"];
 
-function TechnicalKeywordRotator({ reduced }: { reduced: boolean }) {
-  if (reduced) return null;
+// function TechnicalKeywordRotator({ reduced }: { reduced: boolean }) {
+//   if (reduced) return null;
 
-  return (
-    <p
-      className="hero-keywords absolute top-6 left-1/2 -translate-x-1/2 text-accent text-xs uppercase tracking-widest opacity-80 select-none"
-      style={{
-        animation: "keyword-rotate 15s ease-in-out infinite",
-      }}
-    >
-      {techKeywords.map((kw, i) => (
-        <span key={i} className="hero-keyword">{kw}</span>
-      ))}
-    </p>
-  );
-}
+//   return (
+//     <p
+//       className="hero-keywords absolute top-6 left-1/2 -translate-x-1/2 text-accent text-xs uppercase tracking-widest opacity-80 select-none"
+//       style={{
+//         animation: "keyword-rotate 15s ease-in-out infinite",
+//       }}
+//     >
+//       {techKeywords.map((kw, i) => (
+//         <span key={i} className="hero-keyword">{kw}</span>
+//       ))}
+//     </p>
+//   );
+// }
 
 export function Hero() {
   const ready = useSiteReady();
@@ -127,7 +127,7 @@ export function Hero() {
             {site.role}
           </span>
           <span className="h-px w-16 bg-line" aria-hidden />
-          <TechnicalKeywordRotator reduced={reduced} />
+          {/* <TechnicalKeywordRotator reduced={reduced} /> */}
           <p className="font-mono text-xs uppercase tracking-[0.15em] text-accent">
             Full-stack software engineer shipping production applications end-to-end with React, Next.js and Node.js.
           </p>
