@@ -10,7 +10,7 @@ export function Expertise() {
     <section id="expertise" className="section-pad shell relative">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <p className="eyebrow text-accent">// Industry Expertise</p>
+          <p className="eyebrow text-accent">// Industry Expertise // Selected Work</p>
           <h2 className="text-display max-w-2xl mt-4">
             MORE THAN CODE. I BUILD SOLUTIONS.
           </h2>

@@ -38,19 +38,26 @@ export const testimonials: Testimonial[] = [
     role: "Student",
     company: "",
   },
-  // Pending slots — replace with approved testimonials when available
+  // {
+  //   id: "client-pending-01",
+  //   quote: "[PENDING] — awaiting client approval",
+  //   author: "[PENDING]",
+  //   role: "",
+  //   company: "",
+  // },
+  // {
+  //   id: "client-pending-02",
+  //   quote: "[PENDING] — awaiting client approval",
+  //   author: "[PENDING]",
+  //   role: "",
+  //   company: "",
+  // },
   {
-    id: "client-pending-01",
-    quote: "[PENDING] — awaiting client approval",
-    author: "[PENDING]",
+    id: "betterlife-solutions",
+    quote:
+      "I’m very impressed with the professionalism and quality of service delivered by Ajibare Babajide. He demonstrates excellent web development skills, a good understanding of clients’ needs, and a strong commitment to delivering quality work. I particularly appreciate his attention to detail, professionalism, and top-notch customer service throughout the process. I highly recommend his services to anyone looking for a reliable and skilled web developer. Excellent service and great delivery!",
+    author: "CEO",
     role: "",
-    company: "",
-  },
-  {
-    id: "client-pending-02",
-    quote: "[PENDING] — awaiting client approval",
-    author: "[PENDING]",
-    role: "",
-    company: "",
+    company: "BETTERLIFE SOLUTIONS",
   },
 ];

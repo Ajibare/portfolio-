@@ -8,14 +8,11 @@ import { projects } from "@/data/projects";
 import { cn, stripPending } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { FlipCard } from "@/components/ui/FlipCard";
 
 function Cover({ src, alt }: { src: string; alt: string }) {
   return (
-    <div
-      data-cursor="view"
-      className="relative aspect-[4/3] w-full overflow-hidden border border-line bg-surface md:aspect-auto md:h-full []
-[&_img]:size-full [&_img]:object-cover"
-    >
+    <FlipCard className="transition-transform duration-700">
       <Image
         src={src}
         alt={alt}
@@ -24,7 +21,7 @@ function Cover({ src, alt }: { src: string; alt: string }) {
         sizes="(min-width: 768px) 50vw, 100vw"
         className="transition-all duration-500 [filter:grayscale(1)_brightness(0.7)] hover:[filter:none]"
       />
-    </div>
+    </FlipCard>
   );
 }
 
