@@ -110,16 +110,6 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Prominent CTA button */}
-          <Button
-            href="#contact"
-            variant="primary"
-            size="md"
-            className="group inline-flex w-fit items-center gap-3 border border-accent bg-accent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wide text-ink transition-colors hover:bg-transparent hover:text-accent motion-reduce:transition-none"
-          >
-            BOOK A CALL
-          </Button>
-
           <button
             ref={menuButtonRef}
             type="button"

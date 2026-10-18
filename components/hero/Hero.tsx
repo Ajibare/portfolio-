@@ -143,11 +143,6 @@ export function Hero() {
               </Button>
             </Magnetic>
             <Magnetic strength={0.2}>
-              <Button href="#contact" variant="primary" size="md">
-                BOOK A DISCOVERY CALL
-              </Button>
-            </Magnetic>
-            <Magnetic strength={0.2}>
               <Button
                 href={site.resumePath}
                 variant="text"
