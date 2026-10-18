@@ -128,6 +128,9 @@ export function Hero() {
           </span>
           <span className="h-px w-16 bg-line" aria-hidden />
           <TechnicalKeywordRotator reduced={reduced} />
+          <p className="font-mono text-xs uppercase tracking-[0.15em] text-accent">
+            Full-stack software engineer shipping production applications end-to-end with React, Next.js and Node.js.
+          </p>
         </div>
 
         {/* Statement + actions */}

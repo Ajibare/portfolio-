@@ -51,24 +51,7 @@ export function Testimonials() {
               );
             })}
           {/* Pending slots */}
-          {testimonials
-            .filter((t) => t.quote.startsWith("[PENDING]"))
-            .map((testimonial) => (
-              <div
-                key={testimonial.id}
-                data-cursor="default"
-                className="mt-16 flex min-h-64 flex-col items-start justify-center gap-4 border border-dashed border-line bg-surface p-8 md:mt-24"
-              >
-                <p className="font-mono text-xs uppercase tracking-[0.18em] text-accent">
-                  {`// `}In progress
-                </p>
-                <p className="max-w-md text-base leading-relaxed text-muted">
-                  Testimonial will appear here once the owner shares real
-                  endorsements. This section intentionally never carries invented
-                  quotes.
-                </p>
-              </div>
-            ))}
+          {/* No pending placeholder - testimonials section only shows approved quotes */}
         </div>
       ) : (
         <div className="mt-16 grid gap-4 md:mt-24 lg:grid-cols-2">

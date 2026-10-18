@@ -38,14 +38,6 @@ export const testimonials: Testimonial[] = [
     role: "Student",
     company: "",
   },
-  {
-    id: "training-student",
-    quote:
-      "Babajide has been a great mentor and instructor. His teaching style is practical, straightforward, and focused on helping students actually understand what they are doing rather than simply memorizing code. During my learning experience, he helped me improve not only my coding skills but also my approach to solving problems and building projects. His knowledge of modern web development and his experience working on real projects made the lessons much more practical. He is patient, approachable, and genuinely interested in seeing his students improve. I'm grateful for the knowledge and confidence I gained from learning under him. I would strongly recommend Babajide to anyone who wants to learn software development from someone who understands both the technical and practical sides of the industry.",
-    author: "Martin",
-    role: "Student",
-    company: "",
-  },
   // Pending slots — replace with approved testimonials when available
   {
     id: "client-pending-01",
