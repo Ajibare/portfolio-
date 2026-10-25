@@ -74,11 +74,11 @@ export const REMOTE_ASSETS = {
 
   // VastCare Pharmacy
   vastcare_pharmacy: {
-    cover: cloudinaryUrl("vastcare-pharmacy/cover"),
+    cover: cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961860/vastcare1_b4tn3t.png"),
     gallery: [
-      cloudinaryUrl("vastcare-pharmacy/gallery-1"),
-      cloudinaryUrl("vastcare-pharmacy/gallery-2"),
-      cloudinaryUrl("vastcare-pharmacy/gallery-3"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961860/vastcare1_b4tn3t.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961859/vastcare3_jmudnv.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961859/vastcare2_w7dmgd.png"),
     ],
   },
 
@@ -114,39 +114,61 @@ export const REMOTE_ASSETS = {
 
   // SAAJ Partners and Consult
   saaj_partners_and_consult: {
-    cover: cloudinaryUrl("saaj-partners-and-consult/cover"),
-    gallery: [],
+    cover: cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/saaj1_duzsp0.png"),
+    gallery: [
+       cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/saaj1_duzsp0.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/saaj2_ivgc85.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/saaj3_esvrcx.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/saaj4_djcslf.png"),
+    ],
   },
 
   // New Projects
 
   // Epilux Water
   epilux_water: {
-    cover: cloudinaryUrl("epilux-water/cover"),
-    gallery: [],
+    cover: cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux3_klo0jg.png"),
+    gallery: [
+        cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux1_pkux4a.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux2_smpbgu.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux3_klo0jg.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux2_smpbgu.png"),
+    ],
   },
 
   // Future Homes Properties
   future_homes_properties: {
-    cover: cloudinaryUrl("future-homes-properties/cover"),
-    gallery: [],
+    cover: cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/future_home1_pggdmw.png"),
+    gallery: [
+       cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/future_home1_pggdmw.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/future_home2_jdzxvl.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961849/future_home3_is3c5n.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961853/future_home4_hafaep.png"),
+    ],
   },
 
   // Gorro
   gorro: {
-    cover: cloudinaryUrl("gorro/cover"),
-    gallery: [],
+    cover: cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png"),
+    gallery: [
+       cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png"),
+
+    ],
   },
 
   // --- Original Portfolio Projects (kept for reference) ---
 
   // Epilux (original entry)
   epilux_original: {
-    cover: cloudinaryUrl("epilux/cover"),
+    cover: cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux1_pkux4a.png"),
     gallery: [
-      cloudinaryUrl("epilux/gallery-1"),
-      cloudinaryUrl("epilux/gallery-2"),
-      cloudinaryUrl("epilux/gallery-3"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux1_pkux4a.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux2_smpbgu.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux3_klo0jg.png"),
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux2_smpbgu.png"),
     ],
   },
 
