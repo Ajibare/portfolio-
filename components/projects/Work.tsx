@@ -140,13 +140,9 @@ function ProjectCard({
                 ) : (
                   <span
                     className="inline-flex items-center gap-1.5 font-mono text-sm text-faint"
-                    title="Live URL pending"
+                    title=""
                   >
-                    Live{" "}
-                    <span aria-hidden className="text-[10px] uppercase">
-                      pending
                     </span>
-                  </span>
                 )}
                 {project.links.github ? (
                   <a
@@ -166,13 +162,9 @@ function ProjectCard({
                 ) : (
                   <span
                     className="inline-flex items-center gap-1.5 font-mono text-sm text-faint"
-                    title="Source URL pending"
+                    title=""
                   >
-                    Source{" "}
-                    <span aria-hidden className="text-[10px] uppercase">
-                      pending
                     </span>
-                  </span>
                 )}
               </div>
             </div>

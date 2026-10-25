@@ -109,8 +109,7 @@ export function WorkCaseStudy({
               </a>
             ) : (
               <span className="inline-flex items-center gap-2 font-mono text-sm text-faint">
-                Live URL pending
-              </span>
+                              </span>
             )}
             {project.links.github ? (
               <a
@@ -125,8 +124,7 @@ export function WorkCaseStudy({
               </a>
             ) : (
               <span className="inline-flex items-center gap-2 font-mono text-sm text-faint">
-                Source URL pending
-              </span>
+                              </span>
             )}
           </div>
         </Reveal>
@@ -225,8 +223,7 @@ export function WorkCaseStudy({
             </ul>
           ) : (
             <p className="max-w-xl text-sm italic leading-relaxed text-faint">
-              Metrics are never invented — verified results will be added by the
-              owner once the project is released.
+                            owner once the project is released.
             </p>
           )}
         </Block>
