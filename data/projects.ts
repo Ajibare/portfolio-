@@ -13,7 +13,7 @@ export const projects: Project[] = [
     summary:
       "A web-based trading platform that pairs real-time market data with fast order flow — giving traders a clear, dependable view of positions at any moment.",
     stack: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL"],
-    cover: { src: "/work/trading-bolt.webp", alt: "Trading Bolt — interface preview" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/trading-bolt/cover.webp", alt: "Trading Bolt — interface preview" },
     contentStatus: "pending",
     overview:
       "Trading Bolt is a trading platform focused on live market visibility and reliable order execution. A React/Next.js frontend talks to a Node.js API backed by PostgreSQL, with real-time updates across the dashboard.",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   //   summary:
   //     "Epilux is a digital product built from first principles: a web application that makes its core workflow faster and more intuitive than the alternatives.",
   //   stack: ["React", "TypeScript", "Next.js", "Node.js", "MongoDB"],
-  //   cover: { src: "/work/epilux.webp", alt: "Epilux — interface preview" },
+  //   cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/epilux/cover.webp", alt: "Epilux — interface preview" },
   //   contentStatus: "pending",
   //   overview:
   //     "Epilux solves a [PENDING: describe the problem it addresses]. It was designed and shipped as a full-stack web application — a React/Next.js frontend, a Node.js API and MongoDB persistence.",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     summary:
       "A pharmacy website experience focused on communicating healthcare services, presenting medication categories, and helping customers access pharmacy consultations, prescription refills, and delivery information.",
     stack: [],
-    cover: { src: "/work/vastcare-pharmacy.webp", alt: "VastCare Pharmacy — pharmacy website" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/vastcare1_b4tn3t.png", alt: "VastCare Pharmacy — pharmacy website" },
     contentStatus: "pending",
     overview:
       "VastCare Pharmacy's supplied website content emphasises authentic medications, pharmacist guidance, prescription management, and convenient access to pharmacy services. The digital experience presents the organisation, its services, medication categories, branch locations, and customer contact options.",
@@ -104,7 +104,7 @@ export const projects: Project[] = [
     summary:
       "A healthcare management system that organizes clinics around scheduling, records and billing — so care teams spend less time on paperwork.",
     stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
-    cover: { src: "/work/hms.webp", alt: "Healthcare Management System — interface preview" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/healthcare-management-system/cover.webp", alt: "Healthcare Management System — interface preview" },
     contentStatus: "pending",
     overview:
       "The system gives healthcare providers tools to manage appointments, patient records and payments from one place, built on a React/TypeScript frontend and a Node/Express API over PostgreSQL.",
@@ -134,11 +134,11 @@ export const projects: Project[] = [
     summary:
       "A ministry website for Jesus Arena, presenting its Christ-centred mission, leadership, beliefs, media, blog content, service information, and opportunities for people to connect with the church community.",
     stack: [],
-    cover: { src: "/work/jesus-arena.webp", alt: "Jesus Arena — ministry website" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/jesus-arena/cover.webp", alt: "Jesus Arena — ministry website" },
     contentStatus: "pending",
     overview:
       "About the ministry: Communicate the vision of bringing hope, equipping lives, and affecting destinies. Mission and beliefs: Present the church's stated mission and Christian beliefs in an organised, readable format. Leadership: Provide dedicated content for Lead Pastor Oluranti Orioke and Co-Lead Pastor Taiwo Orioke, based on the supplied website content. Media and blog: Support ministry updates, articles, and other published content. Community engagement: Present service times, contact information, mailing-list signup, giving, and social channels where supported by the existing website. Content organisation: Make the church's information easy for visitors to navigate across desktop and mobile devices.",
-    role: "",
+    role: "Frontend Developer",
     problem:
       "The company needed a digital presence that communicates its services, professional approach, and construction and consultancy expertise.",
     solution:
@@ -165,11 +165,11 @@ export const projects: Project[] = [
     summary:
       "A career guidance platform concept designed to help students, graduates, professionals, and career changers explore career options through assessments, personalised recommendations, and career information.",
     stack: [],
-    cover: { src: "/work/talent-tower.webp", alt: "Talent Tower — career platform" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/talent-tower/cover.webp", alt: "Talent Tower — career platform" },
     contentStatus: "pending",
     overview:
       "Purpose: Help people make more informed education and career decisions. Career prediction: Use onboarding information and assessment responses to support career-path recommendations. Personalisation: Present career suggestions informed by a person's background, interests, and aspirations. Personality assessments: Help users explore behavioural traits, work preferences, and potentially suitable career directions. Career exploration: Provide information about career paths, salary ranges, growth potential, and possible alternatives. User experience: Make it easy to understand the platform, take assessments, explore career options, and access account-related actions.",
-    role: "",
+    role: "Frontend Developer",
     problem:
       "Help people make more informed education and career decisions.",
     solution:
@@ -195,11 +195,11 @@ export const projects: Project[] = [
     summary:
       "A savings and community treasury platform designed to support personal saving and more transparent management of shared funds, including structured savings products, group savings, and rotational savings.",
     stack: [],
-    cover: { src: "/work/gorro.webp", alt: "Gorro — savings platform" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/gorro/cover.webp", alt: "Gorro — savings platform" },
     contentStatus: "pending",
     overview:
       "Personal savings: Present fixed savings, target savings, Gorro Vault, and Smart Wallet as products described in the supplied material. Group savings: Explain how Circle Savings supports groups working towards shared financial goals. Rotational savings: Describe Ajo by Gorro as a digital approach to contribution tracking and scheduled rotational payouts. Community treasury: Explain Gorro Cluster's stated three-admin withdrawal approval model and transparent member ledger. Financial transparency: Highlight the product's emphasis on transaction records, visibility, shared governance, and dispute handling. Onboarding: Present the stated journey of downloading the app, creating an account, completing verification, funding a wallet, and selecting a savings or group product.",
-    role: "",
+    role: "Frontend Developer",
     problem:
       "Support personal saving and more transparent management of shared funds.",
     solution:
@@ -226,7 +226,7 @@ export const projects: Project[] = [
     summary:
       "A corporate digital experience for a construction and consultancy firm, presenting its built-environment services, project delivery approach, company profile, and client enquiry journey.",
     stack: [],
-    cover: { src: "/work/saaj-partners.webp", alt: "SAAJ Partners and Consult — corporate website" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/saaj1_duzsp0.png", alt: "SAAJ Partners and Consult — corporate website" },
     contentStatus: "pending",
     overview:
       "The supplied company content mentions a track record of 3+ projects, 5+ clients, 8 services, and 2+ years of experience. These figures belong to SAAJ's supplied website content. Do not use them as my personal achievements or portfolio-wide statistics. The supplied testimonials are labelled as sample testimonials. Do not present them as verified client endorsements without confirmation.",
@@ -250,7 +250,7 @@ export const projects: Project[] = [
     summary:
       "An online water-ordering and delivery platform connecting customers with local marketers for home and business deliveries, with product ordering, bulk sales, regular delivery options, customer wallets, and referral rewards.",
     stack: [],
-    cover: { src: "/work/epilux-water.webp", alt: "Epilux Water — water delivery platform" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/epilux3_klo0jg.png", alt: "Epilux Water — water delivery platform" },
     contentStatus: "final",
     overview:
       "Epilux Water provides a digital platform for ordering sachet and bottled water. Its website presents product listings, bulk-order options, regular deliveries, customer wallet services, referral rewards, and reseller opportunities. The platform aims to make water ordering more convenient for households and businesses while creating opportunities for customer referrals and local marketers.",
@@ -282,7 +282,7 @@ export const projects: Project[] = [
     summary:
       "A real estate website experience for discovering properties across Nigeria, exploring property categories and locations, and learning about sales, rentals, property management, and investment services.",
     stack: [],
-    cover: { src: "/work/future-homes-properties.webp", alt: "Future Homes Properties — property discovery" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/v1792961850/future_home1_pggdmw.png", alt: "Future Homes Properties — property discovery" },
     contentStatus: "pending",
     overview:
       "Future Homes Properties presents a digital property-discovery experience designed to help prospective buyers, renters, landlords, and investors explore real estate opportunities. The supplied content covers property search, featured listings, popular neighbourhoods, real estate services, and educational articles.",
