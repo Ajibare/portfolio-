@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { site, navItems, anchors } from "@/data/site";
 import { useSiteReady } from "@/lib/site-context";
 import { cn } from "@/lib/utils";
@@ -17,6 +17,18 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const [theme, setTheme] = useState(() => {
+    const stored = localStorage.getItem("theme");
+    if (stored) return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  });
+  const htmlRef = useRef<HTMLHtmlElement>(null);
+
+  useEffect(() => {
+    if (htmlRef.current) {
+      htmlRef.current.setAttribute("data-theme", theme);
+    }
+  }, [theme]);
 
   useEffect(() => {
     const read = () => setScrolled(window.scrollY > 32);
@@ -66,6 +78,20 @@ export function Navbar() {
     menuButtonRef.current?.focus();
   }
 
+  useEffect(() => {
+    if (htmlRef.current) {
+      htmlRef.current.setAttribute("data-theme", theme);
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute("content", theme === "dark" ? "#050505" : "#ffffff");
+      }
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
   const menu = {
     hidden: reduced ? { opacity: 0 } : { opacity: 0, y: -24 },
     visible: (i: number) => ({
@@ -77,6 +103,7 @@ export function Navbar() {
 
   return (
     <header
+      ref={htmlRef}
       className={cn(
         "fixed inset-x-0 top-0 z-[100] transition-all duration-300 motion-reduce:transition-none",
         scrolled && !open && !ready && "border-b border-line bg-ink/85 backdrop-blur-md",
@@ -121,6 +148,19 @@ export function Navbar() {
             className="grid size-11 place-items-center rounded-full border border-line text-paper transition-colors duration-300 hover:border-accent hover:text-accent motion-reduce:transition-none lg:hidden"
           >
             {open ? <X size={18} aria-hidden /> : <Menu size={18} aria-hidden />}
+          </button>
+
+          {/* Theme toggle button */}
+          <button
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            className="rounded-full p-2 transition-colors hover:bg-accent/10"
+          >
+            {theme === "dark" ? (
+              <Sun size={18} aria-hidden />
+            ) : (
+              <Moon size={18} aria-hidden />
+            )}
           </button>
         </div>
       </motion.nav>

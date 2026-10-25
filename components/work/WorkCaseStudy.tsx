@@ -7,6 +7,7 @@ import { cn, isPending, stripPending } from "@/lib/utils";
 import { Reveal } from "@/components/ui/Reveal";
 import { WordReveal } from "@/components/ui/WordReveal";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { GalleryViewer } from "@/components/gallery/GalleryViewer";
 
 function Block({
   label,
@@ -41,6 +42,12 @@ export function WorkCaseStudy({
   next: Project;
   prev: Project;
 }) {
+  // Gallery images from the project data
+  const galleryImages = project.gallery.map((src, i) => ({
+    src,
+    alt: `${project.name} image ${i + 1}`,
+  }));
+
   return (
     <article className="shell section-pad">
       <Reveal>
@@ -138,10 +145,13 @@ export function WorkCaseStudy({
             fill
             priority
             sizes="100vw"
-            className="object-cover"
+            className="object-cover cursor-pointer transition-transform hover:scale-101 duration-300"
+            onClick={() => {}}
           />
         </div>
       </Reveal>
+
+      <GalleryViewer images={galleryImages} />
 
       <div className="mt-16 grid gap-12 md:mt-24 lg:grid-cols-[1fr_1fr]">
         <Block label="Overview">
@@ -192,8 +202,7 @@ export function WorkCaseStudy({
                   className={cn(
                     "font-display text-xl font-medium text-paper md:text-2xl",
                     isPending(feature) && "italic text-faint",
-                  )}
-                >
+                  )}>
                   {feature}
                 </span>
               </li>
@@ -203,8 +212,7 @@ export function WorkCaseStudy({
       </div>
 
       <div className="mt-16 border-t border-line pt-12 md:mt-24">
-        {/* Results section — only renders when verified outcomes exist. */}
-        {project.results.length > 0 && project.results.some((r) => !isPending(r)) && (
+        {/* Results section — only renders when verified outcomes exist. */}{project.results.length > 0 && project.results.some((r) => !isPending(r)) && (
           <Block label="Results">
             <ul className="flex flex-col gap-4">
               {project.results.map((result) => (
@@ -215,10 +223,12 @@ export function WorkCaseStudy({
                   <span aria-hidden className="text-accent">—</span>
                   {result}
                 </li>
-              ))}
+              ))
+            }
             </ul>
           </Block>
         )}
+
       </div>
 
       <nav className="mt-24 grid gap-4 border-t border-line pt-14 sm:grid-cols-2 md:mt-32">
