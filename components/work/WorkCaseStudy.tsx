@@ -203,30 +203,22 @@ export function WorkCaseStudy({
       </div>
 
       <div className="mt-16 border-t border-line pt-12 md:mt-24">
-        <Block label="Results">
-          {project.results.length > 0 ? (
+        {/* Results section — only renders when verified outcomes exist. */}
+        {project.results.length > 0 && project.results.some((r) => !isPending(r)) && (
+          <Block label="Results">
             <ul className="flex flex-col gap-4">
               {project.results.map((result) => (
                 <li
                   key={result}
-                  className={cn(
-                    "flex gap-3 text-base leading-relaxed",
-                    pendingClass(result),
-                  )}
+                  className={cn("flex gap-3 text-base leading-relaxed", pendingClass(result))}
                 >
-                  <span aria-hidden className="text-accent">
-                    —
-                  </span>
+                  <span aria-hidden className="text-accent">—</span>
                   {result}
                 </li>
               ))}
             </ul>
-          ) : (
-            <p className="max-w-xl text-sm italic leading-relaxed text-faint">
-                            owner once the project is released.
-            </p>
-          )}
-        </Block>
+          </Block>
+        )}
       </div>
 
       <nav className="mt-24 grid gap-4 border-t border-line pt-14 sm:grid-cols-2 md:mt-32">

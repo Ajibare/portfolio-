@@ -97,7 +97,7 @@ export interface Project {
   architecture: string;
   features: string[];
   /** Gallery images for the project detail page lightbox */
-  gallery: readonly ProjectScreenshot[];
+  gallery: string[];
   /** Intentionally never invented — verified metrics are added by the owner. */
   results: string[];
   links: {
