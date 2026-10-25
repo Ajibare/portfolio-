@@ -1,13 +1,8 @@
 import type { Project, ProjectScreenshot } from "@/types";
 
-/**
- * The write-up fields below are intentionally marked "[PENDING]" everywhere a
- * fact about the project is not yet confirmed by the owner. No results,
- * metrics, links or testimonials are invented here.
- *
- * When final copy is supplied, replace a "[PENDING] ..." string with the real
- * text and (optionally) flip `contentStatus` to "final". `results` stays empty
- * until verified metrics exist. `links` stay `null` until real URLs exist.
+/** The write-up fields below are intentionally marked "[PENDING]" everywhere a fact about the project is not yet confirmed by the owner. No results, metrics, links or testimonials are invented here.
+
+ * When final copy is supplied, replace a "[PENDING] ..." string with the real text and (optionally) flip `contentStatus` to "final". `results` stays empty until verified metrics exist. `links` stay `null` until real URLs exist.
  */
 export const projects: Project[] = [
   {
@@ -36,39 +31,39 @@ export const projects: Project[] = [
       "Order entry with validation",
       "Position & balance history",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
-  {
-    slug: "epilux",
-    number: "02",
-    name: "Epilux",
-    category: "Digital Product",
-    summary:
-      "Epilux is a digital product built from first principles: a web application that makes its core workflow faster and more intuitive than the alternatives.",
-    stack: ["React", "TypeScript", "Next.js", "Node.js", "MongoDB"],
-    cover: { src: "/work/epilux.webp", alt: "Epilux — interface preview" },
-    contentStatus: "pending",
-    overview:
-      "Epilux solves a [PENDING: describe the problem it addresses]. It was designed and shipped as a full-stack web application — a React/Next.js frontend, a Node.js API and MongoDB persistence.",
-    role: "Full-Stack Developer — product build from design through to delivery.",
-    problem: "[PENDING: what was wrong before Epilux existed].",
-    solution:
-      "A focused, fast interface backed by a clean, typed API — the product acts as the single place to get the job done.",
-    technology:
-      "React, TypeScript and Next.js on the frontend; Node.js and Express on the API; MongoDB as the data store.",
-    architecture:
-      "Next.js app → Node/Express API → MongoDB, with a typed schema and straightforward feature modules.",
-    features: [
-      "[PENDING] Headline capability one.",
-      "[PENDING] Headline capability two.",
-      "[PENDING] Headline capability three.",
-    ],
-    gallery: [],
-    results: [],
-    links: { live: null, github: null },
-  },
+  // {
+  //   slug: "epilux",
+  //   number: "02",
+  //   name: "Epilux",
+  //   category: "Digital Product",
+  //   summary:
+  //     "Epilux is a digital product built from first principles: a web application that makes its core workflow faster and more intuitive than the alternatives.",
+  //   stack: ["React", "TypeScript", "Next.js", "Node.js", "MongoDB"],
+  //   cover: { src: "/work/epilux.webp", alt: "Epilux — interface preview" },
+  //   contentStatus: "pending",
+  //   overview:
+  //     "Epilux solves a [PENDING: describe the problem it addresses]. It was designed and shipped as a full-stack web application — a React/Next.js frontend, a Node.js API and MongoDB persistence.",
+  //   role: "Full-Stack Developer — product build from design through to delivery.",
+  //   problem: "[PENDING: what was wrong before Epilux existed].",
+  //   solution:
+  //     "A focused, fast interface backed by a clean, typed API — the product acts as the single place to get the job done.",
+  //   technology:
+  //     "React, TypeScript and Next.js on the frontend; Node.js and Express on the API; MongoDB as the data store.",
+  //   architecture:
+  //     "Next.js app → Node/Express API → MongoDB, with a typed schema and straightforward feature modules.",
+  //   features: [
+  //     "[PENDING] Headline capability one.",
+  //     "[PENDING] Headline capability two.",
+  //     "[PENDING] Headline capability three.",
+  //   ],
+  //   gallery: [] as ProjectScreenshot[],
+  //   results: [],
+  //   links: { live: null, github: null },
+  // },
   {
     slug: "vastcare-pharmacy",
     number: "03",
@@ -81,7 +76,7 @@ export const projects: Project[] = [
     contentStatus: "pending",
     overview:
       "VastCare Pharmacy's supplied website content emphasises authentic medications, pharmacist guidance, prescription management, and convenient access to pharmacy services. The digital experience presents the organisation, its services, medication categories, branch locations, and customer contact options.",
-    role: "",
+    role: "Frontend Developer",
     problem:
       "Customers need access to pharmacy services, consultations, and prescription refills.",
     solution:
@@ -97,7 +92,7 @@ export const projects: Project[] = [
       "Responsive design: Make healthcare information easy to navigate on mobile and desktop.",
       "Customer contact: Provide clear routes to pharmacy enquiries and consultation requests where supported by the actual implementation.",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
@@ -127,7 +122,7 @@ export const projects: Project[] = [
       "Patient records",
       "Billing & payments",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
@@ -158,7 +153,7 @@ export const projects: Project[] = [
       "Community engagement: Present service times, contact information, mailing-list signup, giving, and social channels.",
       "Content organisation: Make the church's information easy to navigate across desktop and mobile devices.",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
@@ -188,7 +183,7 @@ export const projects: Project[] = [
       "Career exploration: Provide information about career paths, salary ranges, growth potential, and possible alternatives.",
       "User experience: Make it easy to understand the platform, take assessments, explore career options, and access account-related actions.",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
@@ -219,7 +214,7 @@ export const projects: Project[] = [
       "Financial transparency: Transaction records, visibility, shared governance, and dispute handling.",
       "Onboarding: Downloading the app, creating an account, completing verification, funding a wallet, and selecting a savings or group product.",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
@@ -235,7 +230,7 @@ export const projects: Project[] = [
     contentStatus: "pending",
     overview:
       "The supplied company content mentions a track record of 3+ projects, 5+ clients, 8 services, and 2+ years of experience. These figures belong to SAAJ's supplied website content. Do not use them as my personal achievements or portfolio-wide statistics. The supplied testimonials are labelled as sample testimonials. Do not present them as verified client endorsements without confirmation.",
-    role: "",
+    role: "Full-Stack Developer",
     problem:
       "The company needed a digital presence that communicates its services, professional approach, and construction and consultancy expertise.",
     solution:
@@ -243,7 +238,7 @@ export const projects: Project[] = [
     technology: "",
     architecture: "",
     features: [],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
@@ -253,32 +248,31 @@ export const projects: Project[] = [
     name: "Epilux Water",
     category: "E-commerce · Water Delivery · Referral Rewards",
     summary:
-      "An online water-ordering and delivery platform that combines secure payments, local marketer fulfilment, customer wallets, and referral rewards.",
+      "An online water-ordering and delivery platform connecting customers with local marketers for home and business deliveries, with product ordering, bulk sales, regular delivery options, customer wallets, and referral rewards.",
     stack: [],
     cover: { src: "/work/epilux-water.webp", alt: "Epilux Water — water delivery platform" },
-    contentStatus: "pending",
+    contentStatus: "final",
     overview:
-      "Epilux Water makes ordering sachet and bottled water convenient by connecting customers with local marketers for doorstep delivery. The platform combines product ordering, payment processing, delivery confirmation, and customer rewards in one digital experience.",
-    role: "",
+      "Epilux Water provides a digital platform for ordering sachet and bottled water. Its website presents product listings, bulk-order options, regular deliveries, customer wallet services, referral rewards, and reseller opportunities. The platform aims to make water ordering more convenient for households and businesses while creating opportunities for customer referrals and local marketers.",
+    role: "Backend Developer",
     problem:
-      "Customers need a convenient way to order water for home or business delivery.",
+      "Households and businesses need a convenient way to order drinking water and explore delivery options. The business also aims to encourage repeat purchases and customer referrals.",
     solution:
-      "Present the platform's features for product ordering, payment integration, local delivery, referral rewards, customer wallet, bulk orders, and order confirmation as described in the supplied content.",
+      "A digital water-ordering experience that brings product listings, bulk sales, regular deliveries, wallet services, referral rewards, and reseller information together in one place.",
     technology: "",
     architecture: "",
     features: [
-      "Product ordering: Browse available water products and place orders.",
-      "Payment integration: Describe the platform's support for card, bank transfer, USSD payments through Flutterwave, and wallet payments.",
-      "Local delivery: Orders are fulfilled through local Epilux marketers.",
-      "Referral rewards: Customers earn rewards on confirmed orders and can invite other customers using referral links.",
-      "Customer wallet: Display earned rewards and related wallet activity.",
-      "Bulk orders: Support water orders for offices, shops, schools, and events.",
-      "Order confirmation: Delivery confirmation triggers the reward process described by the product.",
-      "Responsive experience: Present the ordering journey clearly across desktop and mobile devices.",
+      "Product ordering: Browse available water products and ordering options.",
+      "Bulk sales: Information and ordering options for larger water requirements.",
+      "Regular deliveries: Subscription-based delivery options presented on the website.",
+      "Customer wallet: A wallet feature listed among the platform's customer services.",
+      "Referral and rewards: A programme that rewards customers through qualifying orders and referrals.",
+      "Reseller programme: Information for customers interested in reselling Epilux products.",
+      "Local delivery: Water delivery through local marketers.",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
-    links: { live: null, github: null },
+    links: { live: "https://www.epilux.com.ng/", github: null },
   },
   {
     slug: "future-homes-properties",
@@ -292,7 +286,7 @@ export const projects: Project[] = [
     contentStatus: "pending",
     overview:
       "Future Homes Properties presents a digital property-discovery experience designed to help prospective buyers, renters, landlords, and investors explore real estate opportunities. The supplied content covers property search, featured listings, popular neighbourhoods, real estate services, and educational articles.",
-    role: "",
+    role: "Full-Stack Developer",
     problem:
       "Prospective buyers, renters, landlords, and investors need a digital platform to explore real estate opportunities.",
     solution:
@@ -308,7 +302,7 @@ export const projects: Project[] = [
       "Content and insights: Organise property guides, market articles, and educational content.",
       "Contact journey: Make it straightforward for prospective customers to enquire about properties or services.",
     ],
-    gallery: [],
+    gallery: [] as ProjectScreenshot[],
     results: [],
     links: { live: null, github: null },
   },
