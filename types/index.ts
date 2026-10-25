@@ -66,6 +66,15 @@ export interface ProjectScreenshots {
   alt: string;
 }
 
+export interface ProjectScreenshot {
+  /** Cloudinary public ID or URL */
+  publicId: string;
+  /** Alt text for accessibility */
+  alt: string;
+  /** Optional caption */
+  caption?: string;
+}
+
 export interface Project {
   slug: string;
   number: string;
@@ -87,6 +96,8 @@ export interface Project {
   technology: string;
   architecture: string;
   features: string[];
+  /** Gallery images for the project detail page lightbox */
+  gallery: readonly ProjectScreenshot[];
   /** Intentionally never invented — verified metrics are added by the owner. */
   results: string[];
   links: {

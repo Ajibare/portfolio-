@@ -1,0 +1,332 @@
+import type { Project } from "@/types";
+
+/**
+ * The write-up fields below are intentionally marked "[PENDING]" everywhere a
+ * fact about the project is not yet confirmed by the owner. No results,
+ * metrics, links or testimonials are invented here.
+ *
+ * When final copy is supplied, replace a "[PENDING] ..." string with the real
+ * text and (optionally) flip `contentStatus` to "final". `results` stays empty
+ * until verified metrics exist. `links` stay `null` until real URLs exist.
+ */
+export const projects: Project[] = [
+  {
+    slug: "trading-bolt",
+    number: "01",
+    name: "Trading Bolt",
+    category: "Trading Platform",
+    summary:
+      "A web-based trading platform that pairs real-time market data with fast order flow — giving traders a clear, dependable view of positions at any moment.",
+    stack: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL"],
+    cover: { src: "/work/trading-bolt.webp", alt: "Trading Bolt — interface preview" },
+    contentStatus: "pending",
+    overview:
+      "Trading Bolt is a trading platform focused on live market visibility and reliable order execution. A React/Next.js frontend talks to a Node.js API backed by PostgreSQL, with real-time updates across the dashboard.",
+    role: "Full-Stack Developer — frontend build, real-time dashboard and API integration.",
+    problem:
+      "Money is hard to trade well when data lags and position details live in separate places — users wanted a single, fast view of the market and their balances.",
+    solution:
+      "Built a real-time dashboard on a single source of truth, with REST APIs for orders and balances and a UI designed to stay responsive under heavy tick traffic.",
+    technology:
+      "React, TypeScript and Next.js on the frontend; Node.js and Express for the API; PostgreSQL for transactional order and balance data.",
+    architecture:
+      "Next.js app serving the dashboard → Node/Express REST API → PostgreSQL, with websockets for live updates and a clear separation between read and write paths.",
+    features: [
+      "Live quotes & dashboard",
+      "Order entry with validation",
+      "Position & balance history",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "epilux",
+    number: "02",
+    name: "Epilux",
+    category: "Digital Product",
+    summary:
+      "Epilux is a digital product built from first principles: a web application that makes its core workflow faster and more intuitive than the alternatives.",
+    stack: ["React", "TypeScript", "Next.js", "Node.js", "MongoDB"],
+    cover: { src: "/work/epilux.webp", alt: "Epilux — interface preview" },
+    contentStatus: "pending",
+    overview:
+      "Epilux solves a [PENDING: describe the problem it addresses]. It was designed and shipped as a full-stack web application — a React/Next.js frontend, a Node.js API and MongoDB persistence.",
+    role: "Full-Stack Developer — product build from design through to delivery.",
+    problem: "[PENDING: what was wrong before Epilux existed].",
+    solution:
+      "A focused, fast interface backed by a clean, typed API — the product acts as the single place to get the job done.",
+    technology:
+      "React, TypeScript and Next.js on the frontend; Node.js and Express on the API; MongoDB as the data store.",
+    architecture:
+      "Next.js app → Node/Express API → MongoDB, with a typed schema and straightforward feature modules.",
+    features: [
+      "[PENDING] Headline capability one.",
+      "[PENDING] Headline capability two.",
+      "[PENDING] Headline capability three.",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "vastcare-pharmacy",
+    number: "03",
+    name: "VastCare Pharmacy",
+    category: "Healthcare E-commerce",
+    summary:
+      "VastCare Pharmacy is a healthcare e-commerce platform that makes ordering medicines and managing pharmacy logistics simple — for customers and operators alike.",
+    stack: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL"],
+    cover: { src: "/work/vastcare.webp", alt: "VastCare Pharmacy — interface preview" },
+    contentStatus: "pending",
+    overview:
+      "VastCare Pharmacy provides an online storefront for medicines and health products, with catalog, ordering and fulfillment workflows running on a React/Next.js frontend and a Node.js API over PostgreSQL.",
+    role: "Full-Stack Developer — frontend, product workflows and API.",
+    problem:
+      "Ordering pharmacy items often meant phone calls and guesswork — customers had no reliable online path, and operators struggled to track orders.",
+    solution:
+      "An e-commerce experience with product search, cart and checkout, plus an operator view for order management grounded in a shared order model.",
+    technology:
+      "React, TypeScript and Next.js; Node.js and Express APIs; PostgreSQL for products, orders and stock.",
+    architecture:
+      "Storefront and admin built in the Next.js app, both consuming one Node/Express API backed by PostgreSQL.",
+    features: [
+      "Product catalog & search",
+      "Cart to checkout",
+      "Order tracking for customers & staff",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "healthcare-management-system",
+    number: "04",
+    name: "Healthcare Management System",
+    category: "Healthcare SaaS",
+    summary:
+      "A healthcare management system that organizes clinics around scheduling, records and billing — so care teams spend less time on paperwork.",
+    stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
+    cover: { src: "/work/hms.webp", alt: "Healthcare Management System — interface preview" },
+    contentStatus: "pending",
+    overview:
+      "The system gives healthcare providers tools to manage appointments, patient records and payments from one place, built on a React/TypeScript frontend and a Node/Express API over PostgreSQL.",
+    role: "Full-Stack Developer — core modules across frontend and API.",
+    problem:
+      "Clinics juggled appointments, records and billing across spreadsheets and paper — prone to errors and slow for staff and patients.",
+    solution:
+      "Centralized modules for scheduling, records, and billing sharing one patient and visit model, with role-based access for staff.",
+    technology:
+      "React, TypeScript, Node.js, Express and PostgreSQL.",
+    architecture:
+      "Modular SPA + REST API; per-module data flows over a shared PostgreSQL schema.",
+    features: [
+      "Appointment scheduling",
+      "Patient records",
+      "Billing & payments",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "ibm-capstone",
+    number: "05",
+    name: "IBM Capstone",
+    category: "Cloud-Native Full-stack",
+    summary:
+      "Cloud-native full-stack application built with React and Node.js — MongoDB, authentication and REST APIs — containerized with Docker and shipped through a CI/CD pipeline.",
+    stack: ["React", "Node.js", "Express", "MongoDB", "Docker", "CI/CD"],
+    cover: { src: "/work/ibm-capstone.webp", alt: "IBM Capstone — cloud-native application" },
+    contentStatus: "pending",
+    overview:
+      "A cloud-native application built and deployed end-to-end as the IBM full-stack capstone: a React frontend, a Node.js API, MongoDB persistence and JWT authentication, wrapped in Docker and released through a CI/CD pipeline.",
+    role: "Full-stack developer — from application design through to deployment.",
+    problem:
+      "[PENDING] The problem this capstone was built to solve, and what the app does for its users.",
+    solution:
+      "[PENDING] The approach that addressed the problem and the key decisions behind it.",
+    technology:
+      "React + Node.js with MongoDB for persistence and JWT-based authentication; Docker and CI/CD used for the deployment pipeline.",
+    architecture:
+      "[PENDING] System shape: how the pieces fit together — frontend, API, data, deployment.",
+    features: [
+      "[PENDING] Feature one — short, concrete description.",
+      "[PENDING] Feature two — short, concrete description.",
+      "[PENDING] Feature three — short, concrete description.",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "cardily",
+    number: "06",
+    name: "Cardily",
+    category: "Digital Product · Smart Identity & Contact Sharing",
+    summary:
+      "A smart-card platform concept focused on making contact sharing, event access, and identity-related interactions more convenient through connected card experiences and NFC-enabled sharing.",
+    stack: [],
+    cover: { src: "/work/cardily.webp", alt: "Cardily — smart identity card" },
+    contentStatus: "pending",
+    overview:
+      "A smart-card platform concept focused on making contact sharing, event access, and identity-related interactions more convenient through connected card experiences and NFC-enabled sharing.",
+    role: "",
+    problem:
+      "Users may find traditional contact sharing and event access cumbersome without digital alternatives.",
+    solution:
+      "Present the platform's intended use cases for smart card interactions, event access, and employee management as described in the supplied product content.",
+    technology: "",
+    architecture: "",
+    features: [
+      "Smart business cards: Share contact information, professional profiles, and other supported details with a tap.",
+      "NFC-enabled interactions: Reduce reliance on traditional printed business cards by supporting compatible tap-based sharing.",
+      "Event management: Present the platform's intended event-related card and access use cases.",
+      "Employee management: Present the employee-related use case described in the supplied product content.",
+      "Customisation: Support card design and personalisation as part of the product experience.",
+      "Smart analytics: Describe this as a proposed or advertised capability unless implementation can be verified.",
+      "Ordering journey: Organise the stated flow of account creation, card customisation, review, ordering, printing, and shipping.",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "excefort",
+    number: "07",
+    name: "ExceFort Environmental",
+    category: "Business Website",
+    summary:
+      "Interactive, responsive website for a geotechnical services company — driving a 20% increase in inquiries.",
+    stack: ["HTML5", "CSS3", "JavaScript"],
+    cover: { src: "/work/excefort.webp", alt: "ExceFort Environmental — company website" },
+    contentStatus: "pending",
+    overview:
+      "An interactive, responsive website for ExceFort, a geotechnical services company, built to make their services clear and easy to investigate — with outcomes that measurable.",
+    role: "Web developer — design, build and SEO.",
+    problem:
+      "[PENDING] The problem the ExceFort website was built to solve, and what was wrong before.",
+    solution:
+      "[PENDING] The approach that addressed the problem and the key decisions behind it.",
+    technology: "[PENDING] Technology rationale for the build.",
+    architecture: "[PENDING] Site structure and content strategy.",
+    features: [
+      "[PENDING] Responsive, interactive service pages.",
+      "[PENDING] Contact and enquiry flow.",
+      "[PENDING] SEO and performance fundamentals.",
+    ],
+    results: ["20% increase in inquiries after relaunch."],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "jesus-arena",
+    number: "08",
+    name: "Jesus Arena",
+    category: "Church Website · Community & Ministry",
+    summary:
+      "A ministry website for Jesus Arena, presenting its Christ-centred mission, leadership, beliefs, media, blog content, service information, and opportunities for people to connect with the church community.",
+    stack: [],
+    cover: { src: "/work/jesus-arena.webp", alt: "Jesus Arena — ministry website" },
+    contentStatus: "pending",
+    overview:
+      "About the ministry: Communicate the vision of bringing hope, equipping lives, and affecting destinies. Mission and beliefs: Present the church's stated mission and Christian beliefs in an organised, readable format. Leadership: Provide dedicated content for Lead Pastor Oluranti Orioke and Co-Lead Pastor Taiwo Orioke, based on the supplied website content. Media and blog: Support ministry updates, articles, and other published content. Community engagement: Present service times, contact information, mailing-list signup, giving, and social channels where supported by the existing website. Content organisation: Make the church's information easy for visitors to navigate across desktop and mobile devices.",
+    role: "",
+    problem:
+      "The company needed a digital presence that communicates its services, professional approach, and construction and consultancy expertise.",
+    solution:
+      "Organise the supplied content into a clear company introduction, service overview, reasons to choose the firm, featured projects, delivery process, insights, and contact sections.",
+    technology: "",
+    architecture: "",
+    features: [
+      "About the ministry: Communicate the vision of bringing hope, equipping lives, and affecting destinies.",
+      "Mission and beliefs: Present the church's stated mission and Christian beliefs in an organised, readable format.",
+      "Leadership: Provide dedicated content for Lead Pastor Oluranti Orioke and Co-Lead Pastor Taiwo Orioke.",
+      "Media and blog: Support ministry updates, articles, and other published content.",
+      "Community engagement: Present service times, contact information, mailing-list signup, giving, and social channels.",
+      "Content organisation: Make the church's information easy to navigate across desktop and mobile devices.",
+    ],
+    results: [],
+    gallery: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "talent-tower",
+    number: "09",
+    name: "Talent Tower",
+    category: "Career Technology · AI-Assisted Career Guidance",
+    summary:
+      "A career guidance platform concept designed to help students, graduates, professionals, and career changers explore career options through assessments, personalised recommendations, and career information.",
+    stack: [],
+    cover: { src: "/work/talent-tower.webp", alt: "Talent Tower — career platform" },
+    contentStatus: "pending",
+    overview:
+      "Purpose: Help people make more informed education and career decisions. Career prediction: Use onboarding information and assessment responses to support career-path recommendations. Personalisation: Present career suggestions informed by a person's background, interests, and aspirations. Personality assessments: Help users explore behavioural traits, work preferences, and potentially suitable career directions. Career exploration: Provide information about career paths, salary ranges, growth potential, and possible alternatives. User experience: Make it easy to understand the platform, take assessments, explore career options, and access account-related actions.",
+    role: "",
+    problem:
+      "Help people make more informed education and career decisions.",
+    solution:
+      "Present the platform's features for career prediction, personalisation, personality assessments, and career exploration as described in the supplied content.",
+    technology: "",
+    architecture: "",
+    features: [
+      "Career prediction: Use onboarding information and assessment responses to support career-path recommendations.",
+      "Personalisation: Present career suggestions informed by a person's background, interests, and aspirations.",
+      "Personality assessments: Help users explore behavioural traits, work preferences, and potentially suitable career directions.",
+      "Career exploration: Provide information about career paths, salary ranges, growth potential, and possible alternatives.",
+      "User experience: Make it easy to understand the platform, take assessments, explore career options, and access account-related actions.",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "gorro",
+    number: "10",
+    name: "Gorro",
+    category: "Fintech · Savings & Digital Treasury",
+    summary:
+      "A savings and community treasury platform designed to support personal saving and more transparent management of shared funds, including structured savings products, group savings, and rotational savings.",
+    stack: [],
+    cover: { src: "/work/gorro.webp", alt: "Gorro — savings platform" },
+    contentStatus: "pending",
+    overview:
+      "Personal savings: Present fixed savings, target savings, Gorro Vault, and Smart Wallet as products described in the supplied material. Group savings: Explain how Circle Savings supports groups working towards shared financial goals. Rotational savings: Describe Ajo by Gorro as a digital approach to contribution tracking and scheduled rotational payouts. Community treasury: Explain Gorro Cluster's stated three-admin withdrawal approval model and transparent member ledger. Financial transparency: Highlight the product's emphasis on transaction records, visibility, shared governance, and dispute handling. Onboarding: Present the stated journey of downloading the app, creating an account, completing verification, funding a wallet, and selecting a savings or group product.",
+    role: "",
+    problem:
+      "Support personal saving and more transparent management of shared funds.",
+    solution:
+      "Present the product's user-facing purpose and major workflows as described in the supplied material without exposing confidential internal implementation details.",
+    technology: "",
+    architecture: "",
+    features: [
+      "Personal savings: Fixed savings, target savings, Gorro Vault, and Smart Wallet.",
+      "Group savings: Circle Savings supports groups working towards shared financial goals.",
+      "Rotational savings: Ajo by Gorro — digital approach to contribution tracking and scheduled rotational payouts.",
+      "Community treasury: Gorro Cluster's three-admin withdrawal approval model and transparent member ledger.",
+      "Financial transparency: Transaction records, visibility, shared governance, and dispute handling.",
+      "Onboarding: Downloading the app, creating an account, completing verification, funding a wallet, and selecting a savings or group product.",
+    ],
+    results: [],
+    links: { live: null, github: null },
+  },
+  {
+    slug: "saaj-partners-and-consult",
+    number: "11",
+    name: "SAAJ Partners and Consult",
+    category: "Corporate Website · Construction & Consultancy",
+    summary:
+      "A corporate digital experience for a construction and consultancy firm, presenting its built-environment services, project delivery approach, company profile, and client enquiry journey.",
+    stack: [],
+    cover: { src: "/work/saaj-partners.webp", alt: "SAAJ Partners and Consult — corporate website" },
+    contentStatus: "pending",
+    overview:
+      "The supplied company content mentions a track record of 3+ projects, 5+ clients, 8 services, and 2+ years of experience. These figures belong to SAAJ's supplied website content. Do not use them as my personal achievements or portfolio-wide statistics. The supplied testimonials are labelled as sample testimonials. Do not present them as verified client endorsements without confirmation.",
+    role: "",
+    problem:
+      "The company needed a digital presence that communicates its services, professional approach, and construction and consultancy expertise.",
+    solution:
+      "Organise the supplied content into a clear company introduction, service overview, reasons to choose the firm, featured projects, delivery process, insights, and contact sections.",
+    technology: "",
+    architecture: "",
+    features: [],
+    results: [],
+    links: { live: null, github: null },
+  },
+] as const;
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => project.slug === slug);
+}
