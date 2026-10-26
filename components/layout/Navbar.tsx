@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -17,11 +17,29 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-  const [theme, setTheme] = useState(() => {
+  const [theme, setTheme] = useState<"dark" | "light">("light");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
     const stored = localStorage.getItem("theme");
-    if (stored) return stored;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-  });
+
+    const initialTheme =
+      stored === "dark" || stored === "light"
+        ? stored
+        : window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+
+    setTheme(initialTheme);
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme, mounted]);
+
   const htmlRef = useRef<HTMLHtmlElement>(null);
 
   useEffect(() => {
@@ -31,12 +49,22 @@ export function Navbar() {
   }, [theme]);
 
   useEffect(() => {
+    if (htmlRef.current) {
+      htmlRef.current.setAttribute("data-theme", theme);
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute("content", theme === "dark" ? "#050505" : "#ffffff");
+      }
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    if (reduced) return;
     const read = () => setScrolled(window.scrollY > 32);
     read();
     window.addEventListener("scroll", read, { passive: true });
     return () => window.removeEventListener("scroll", read);
   }, []);
-
   useEffect(() => {
     const ids = ["work", "about", "experience", "services", "testimonials", "contact"];
     const sections = ids
@@ -79,14 +107,8 @@ export function Navbar() {
   }
 
   useEffect(() => {
-    if (htmlRef.current) {
-      htmlRef.current.setAttribute("data-theme", theme);
-      const meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) {
-        meta.setAttribute("content", theme === "dark" ? "#050505" : "#ffffff");
-      }
-    }
-  }, [theme]);
+    setTheme(theme === "dark" ? "light" : "dark");
+  }, []);
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");

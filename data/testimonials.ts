@@ -2,8 +2,6 @@ import type { Testimonial } from "@/types";
 
 /**
  * Only real, verifiable testimonials belong here. Never invent quotes.
- * Pending slots are marked by the quote starting with "[PENDING]" and will fall back
- * to an empty-state until the owner supplies approved wording.
  */
 export const testimonials: Testimonial[] = [
   {
@@ -38,26 +36,12 @@ export const testimonials: Testimonial[] = [
     role: "Student",
     company: "",
   },
-  // {
-  //   id: "client-pending-01",
-  //   quote: "[PENDING] — awaiting client approval",
-  //   author: "[PENDING]",
-  //   role: "",
-  //   company: "",
-  // },
-  // {
-  //   id: "client-pending-02",
-  //   quote: "[PENDING] — awaiting client approval",
-  //   author: "[PENDING]",
-  //   role: "",
-  //   company: "",
-  // },
   {
-    id: "betterlife-solutions",
+    id: "training-student",
     quote:
-      "I’m very impressed with the professionalism and quality of service delivered by Ajibare Babajide. He demonstrates excellent web development skills, a good understanding of clients’ needs, and a strong commitment to delivering quality work. I particularly appreciate his attention to detail, professionalism, and top-notch customer service throughout the process. I highly recommend his services to anyone looking for a reliable and skilled web developer. Excellent service and great delivery!",
-    author: "CEO",
-    role: "",
-    company: "BETTERLIFE SOLUTIONS",
+      "Babajide has been a great mentor and instructor. His teaching style is practical, straightforward, and focused on helping students actually understand what they are doing rather than simply memorizing code. During my learning experience, he helped me improve not only my coding skills but also my approach to solving problems and building projects. His knowledge of modern web development and his experience working on real projects made the lessons much more practical. He is patient, approachable, and genuinely interested in seeing his students improve. I'm grateful for the knowledge and confidence I gained from learning under him. I would strongly recommend Babajide to anyone who wants to learn software development from someone who understands both the technical and practical sides of the industry.",
+    author: "Martin",
+    role: "Student",
+    company: "",
   },
 ];
