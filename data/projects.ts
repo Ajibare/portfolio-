@@ -1,4 +1,5 @@
 import type { Project, ProjectScreenshot } from "@/types";
+import { REMOTE_ASSETS } from "@/remoteAssets";
 
 /** The write-up fields below are intentionally marked "[PENDING]" everywhere a fact about the project is not yet confirmed by the owner. No results, metrics, links or testimonials are invented here.
 
@@ -13,7 +14,7 @@ export const projects: Project[] = [
     summary:
       "A web-based trading platform that pairs real-time market data with fast order flow — giving traders a clear, dependable view of positions at any moment.",
     stack: ["React", "TypeScript", "Next.js", "Node.js", "PostgreSQL"],
-    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/trading-bolt/cover.webp", alt: "Trading Bolt — interface preview" },
+    cover: { src: REMOTE_ASSETS.fallback.cover, alt: "Trading Bolt — interface preview" },
     contentStatus: "pending",
     overview:
       "Trading Bolt is a trading platform focused on live market visibility and reliable order execution. A React/Next.js frontend talks to a Node.js API backed by PostgreSQL, with real-time updates across the dashboard.",
@@ -32,10 +33,7 @@ export const projects: Project[] = [
       "Position & balance history",
     ],
     gallery: [
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png",
+      REMOTE_ASSETS.fallback.cover,
     ] as string[],
     results: [],
     links: { live: null, github: null },
@@ -98,10 +96,9 @@ export const projects: Project[] = [
       "Customer contact: Provide clear routes to pharmacy enquiries and consultation requests where supported by the actual implementation.",
     ],
     gallery: [
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961860/vastcare1_b4tn3t.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961859/vastcare3_jmudnv.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961859/vastcare2_w7dmgd.png",
     ] as string[],
     results: [],
     links: { live: null, github: null },
@@ -114,7 +111,7 @@ export const projects: Project[] = [
     summary:
       "A healthcare management system that organizes clinics around scheduling, records and billing — so care teams spend less time on paperwork.",
     stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
-    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/healthcare-management-system/cover.webp", alt: "Healthcare Management System — interface preview" },
+    cover: { src: REMOTE_ASSETS.fallback.cover, alt: "Healthcare Management System — interface preview" },
     contentStatus: "pending",
     overview:
       "The system gives healthcare providers tools to manage appointments, patient records and payments from one place, built on a React/TypeScript frontend and a Node/Express API over PostgreSQL.",
@@ -133,10 +130,7 @@ export const projects: Project[] = [
       "Billing & payments",
     ],
     gallery: [
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png",
+      REMOTE_ASSETS.fallback.cover,
     ] as string[],
     results: [],
     links: { live: null, github: null },
@@ -149,7 +143,7 @@ export const projects: Project[] = [
     summary:
       "A ministry website for Jesus Arena, presenting its Christ-centred mission, leadership, beliefs, media, blog content, service information, and opportunities for people to connect with the church community.",
     stack: [],
-    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/jesus-arena/cover.webp", alt: "Jesus Arena — ministry website" },
+    cover: { src: REMOTE_ASSETS.fallback.cover, alt: "Jesus Arena — ministry website" },
     contentStatus: "pending",
     overview:
       "About the ministry: Communicate the vision of bringing hope, equipping lives, and affecting destinies. Mission and beliefs: Present the church's stated mission and Christian beliefs in an organised, readable format. Leadership: Provide dedicated content for Lead Pastor Oluranti Orioke and Co-Lead Pastor Taiwo Orioke, based on the supplied website content. Media and blog: Support ministry updates, articles, and other published content. Community engagement: Present service times, contact information, mailing-list signup, giving, and social channels where supported by the existing website. Content organisation: Make the church's information easy for visitors to navigate across desktop and mobile devices.",
@@ -169,10 +163,7 @@ export const projects: Project[] = [
       "Content organisation: Make the church's information easy to navigate across desktop and mobile devices.",
     ],
     gallery: [
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png",
+      REMOTE_ASSETS.fallback.cover,
     ] as string[],
     results: [],
     links: { live: null, github: null },
@@ -185,7 +176,7 @@ export const projects: Project[] = [
     summary:
       "A career guidance platform concept designed to help students, graduates, professionals, and career changers explore career options through assessments, personalised recommendations, and career information.",
     stack: [],
-    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/talent-tower/cover.webp", alt: "Talent Tower — career platform" },
+    cover: { src: REMOTE_ASSETS.fallback.cover, alt: "Talent Tower — career platform" },
     contentStatus: "pending",
     overview:
       "Purpose: Help people make more informed education and career decisions. Career prediction: Use onboarding information and assessment responses to support career-path recommendations. Personalisation: Present career suggestions informed by a person's background, interests, and aspirations. Personality assessments: Help users explore behavioural traits, work preferences, and potentially suitable career directions. Career exploration: Provide information about career paths, salary ranges, growth potential, and possible alternatives. User experience: Make it easy to understand the platform, take assessments, explore career options, and access account-related actions.",
@@ -204,10 +195,7 @@ export const projects: Project[] = [
       "User experience: Make it easy to understand the platform, take assessments, explore career options, and access account-related actions.",
     ],
     gallery: [
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png",
+      REMOTE_ASSETS.fallback.cover,
     ] as string[],
     results: [],
     links: { live: null, github: null },
@@ -220,7 +208,7 @@ export const projects: Project[] = [
     summary:
       "A savings and community treasury platform designed to support personal saving and more transparent management of shared funds, including structured savings products, group savings, and rotational savings.",
     stack: [],
-    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/gorro/cover.webp", alt: "Gorro — savings platform" },
+    cover: { src: "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961851/gorro1_j1mgxr.png", alt: "Gorro — savings platform" },
     contentStatus: "pending",
     overview:
       "Personal savings: Present fixed savings, target savings, Gorro Vault, and Smart Wallet as products described in the supplied material. Group savings: Explain how Circle Savings supports groups working towards shared financial goals. Rotational savings: Describe Ajo by Gorro as a digital approach to contribution tracking and scheduled rotational payouts. Community treasury: Explain Gorro Cluster's stated three-admin withdrawal approval model and transparent member ledger. Financial transparency: Highlight the product's emphasis on transaction records, visibility, shared governance, and dispute handling. Onboarding: Present the stated journey of downloading the app, creating an account, completing verification, funding a wallet, and selecting a savings or group product.",
@@ -269,10 +257,10 @@ export const projects: Project[] = [
     architecture: "",
     features: [],
     gallery: [
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961852/saaj1_duzsp0.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961852/saaj2_ivgc85.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961852/saaj3_esvrcx.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961852/saaj4_djcslf.png",
     ] as string[],
     results: [],
     links: { live: null, github: null },
@@ -305,7 +293,11 @@ export const projects: Project[] = [
       "Reseller programme: Information for customers interested in reselling Epilux products.",
       "Local delivery: Water delivery through local marketers.",
     ],
-    gallery: [] as string[],
+    gallery: [
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961850/epilux3_klo0jg.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961850/epilux1_pkux4a.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961850/epilux2_smpbgu.png",
+    ] as string[],
     results: [],
     links: { live: "https://www.epilux.com.ng/", github: null },
   },
@@ -338,10 +330,10 @@ export const projects: Project[] = [
       "Contact journey: Make it straightforward for prospective customers to enquire about properties or services.",
     ],
     gallery: [
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961852/gorro3_e58eca.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro2_dy7mf0.png",
-      "https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro4_ll86yr.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961850/future_home1_pggdmw.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961850/future_home2_jdzxvl.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961849/future_home3_is3c5n.png",
+      "https://res.cloudinary.com/dhipowibc/image/upload/f_auto,q_auto,w_auto,c_limit/v1792961853/future_home4_hafaep.png",
     ] as string[],
     results: [],
     links: { live: null, github: null },

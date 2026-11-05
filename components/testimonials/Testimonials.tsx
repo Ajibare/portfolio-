@@ -52,6 +52,9 @@ export function Testimonials() {
                   {meta && (
                     <span className="font-mono text-xs text-muted">{meta}</span>
                   )}
+                  {testimonial.tagline && (
+                    <span className="font-mono text-xs text-muted">{testimonial.tagline}</span>
+                  )}
                 </figcaption>
               </figure>
             );

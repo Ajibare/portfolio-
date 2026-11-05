@@ -8,6 +8,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { WordReveal } from "@/components/ui/WordReveal";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { GalleryViewer } from "@/components/gallery/GalleryViewer";
+import { REMOTE_ASSETS } from "@/remoteAssets";
 
 function Block({
   label,
@@ -43,7 +44,10 @@ export function WorkCaseStudy({
   prev: Project;
 }) {
   // Gallery images from the project data
-  const galleryImages = project.gallery.map((src, i) => ({
+  const galleryImages = (project.gallery.length > 0
+    ? project.gallery
+    : [REMOTE_ASSETS.fallback.cover]
+  ).map((src, i) => ({
     src,
     alt: `${project.name} image ${i + 1}`,
   }));
@@ -140,7 +144,7 @@ export function WorkCaseStudy({
       <Reveal className="mt-14 md:mt-20">
         <div className="relative aspect-[16/9] w-full overflow-hidden border border-line bg-surface">
           <Image
-            src={project.cover.src}
+            src={project.cover.src || REMOTE_ASSETS.fallback.cover}
             alt={project.cover.alt}
             fill
             priority

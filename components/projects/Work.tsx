@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { gsap } from "@/lib/gsap";
 import { projects } from "@/data/projects";
+import { REMOTE_ASSETS } from "@/remoteAssets";
 import { cn, stripPending } from "@/lib/utils";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
@@ -176,7 +177,7 @@ function ProjectCard({
               index % 2 === 1 ? "md:order-1" : "",
             )}
           >
-            <Cover src={project.cover.src} alt={project.cover.alt} />
+            <Cover src={project.cover.src || REMOTE_ASSETS.fallback.cover} alt={project.cover.alt} />
           </div>
         </div>
       </article>

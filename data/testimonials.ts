@@ -29,19 +29,12 @@ export const testimonials: Testimonial[] = [
     company: "",
   },
   {
-    id: "mentorship-mentee",
+    id: "betterlife-solutions",
     quote:
-      "Learning software development with Babajide has been a really valuable experience. What I appreciate most is his ability to break down difficult concepts and explain them in a way that is easy to understand. He doesn't just teach you how to write code; he teaches you how to think like a developer, solve problems, debug issues, and understand why things work the way they do. His practical approach to teaching made it easier for me to connect what I was learning with real-world development. He was also patient when answering questions and willing to go over difficult topics until they became clearer. I would highly recommend Babajide to anyone looking for a developer who can both build real software and effectively mentor aspiring developers.",
-    author: "Martin",
-    role: "Student",
-    company: "",
-  },
-  {
-    id: "training-student",
-    quote:
-      "Babajide has been a great mentor and instructor. His teaching style is practical, straightforward, and focused on helping students actually understand what they are doing rather than simply memorizing code. During my learning experience, he helped me improve not only my coding skills but also my approach to solving problems and building projects. His knowledge of modern web development and his experience working on real projects made the lessons much more practical. He is patient, approachable, and genuinely interested in seeing his students improve. I'm grateful for the knowledge and confidence I gained from learning under him. I would strongly recommend Babajide to anyone who wants to learn software development from someone who understands both the technical and practical sides of the industry.",
-    author: "Martin",
-    role: "Student",
-    company: "",
+      "I’m very impressed with the professionalism and quality of service delivered by Ajibare Babajide. He demonstrates excellent web development skills, a good understanding of clients’ needs, and a strong commitment to delivering quality work. I particularly appreciate his attention to detail, professionalism, and top-notch customer service throughout the process. I highly recommend his services to anyone looking for a reliable and skilled web developer. Excellent service and great delivery!",
+    author: "CEO",
+    role: "CEO",
+    company: "BETTERLIFE SOLUTIONS",
+    tagline: "Connecting you to the right people.",
   },
 ];

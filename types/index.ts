@@ -57,6 +57,7 @@ export interface Testimonial {
   author: string;
   role: string;
   company: string;
+  tagline?: string;
 }
 
 export type ProjectContentStatus = "pending" | "final";

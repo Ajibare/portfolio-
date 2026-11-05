@@ -144,7 +144,7 @@ export function Navbar() {
         "fixed inset-x-0 top-0 z-[100] transition-all duration-300 motion-reduce:transition-none",
         scrolled && !open && !ready && "border-b border-line bg-ink/85 backdrop-blur-md",
         !ready && "pointer-events-none",
-        scrolled && open && "border-b border-line bg-ink/85 backdrop-blur-md",
+        (scrolled || open) && "border-b border-line bg-ink/85 backdrop-blur-md",
         !scrolled && !open && "border-b border-transparent",
       )}
     >

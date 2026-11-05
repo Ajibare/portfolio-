@@ -40,6 +40,11 @@ function cloudinaryUrl(publicId: string, options: { width?: number; quality?: st
     `c_limit`,
   ];
   const transformation = params.join(",");
+  if (/^https?:\/\//i.test(publicId)) {
+    const url = new URL(publicId);
+    url.pathname = `/image/upload/${transformation}${url.pathname}`;
+    return url.toString();
+  }
   return `${cloudinaryBaseUrl}/${transformation}/${publicId}.webp`;
 }
 
@@ -191,10 +196,19 @@ export const REMOTE_ASSETS = {
       cloudinaryUrl("ibm-capstone/gallery-3"),
     ],
   },
+
+  // Shared fallback image used by projects that do not have a valid cover yet.
+  fallback: {
+    cover: cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png"),
+    gallery: [
+      cloudinaryUrl("https://res.cloudinary.com/dhipowibc/image/upload/v1792961851/gorro1_j1mgxr.png"),
+    ],
+  },
 };
 
 // Type definitions for TypeScript support
 export type RemoteAssetKeys = keyof typeof REMOTE_ASSETS;
+export type FallbackAssets = typeof REMOTE_ASSETS.fallback;
 
 // Project-specific type exports for easy importing
 export type TradingBoltAssets = typeof REMOTE_ASSETS.trading_bolt;
@@ -217,6 +231,7 @@ export const {
   epilux_water,
   future_homes_properties,
   gorro,
+  fallback,
 } = REMOTE_ASSETS;
 
 // Export the cloudinaryCloudName for use in components if needed
