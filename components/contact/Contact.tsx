@@ -211,7 +211,7 @@ export function Contact() {
                   type="submit"
                   disabled={isSubmitting}
                   data-cursor="click"
-                  className="group inline-flex w-fit items-center gap-3 border border-accent bg-accent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wide text-ink transition-colors hover:bg-transparent hover:text-accent disabled:cursor-not-allowed disabled:opacity-50"
+                  className="group inline-flex w-fit items-center gap-3 border border-accent bg-accent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wide text-paper dark:text-ink transition-colors hover:bg-transparent hover:text-paper disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {isSubmitting ? "Sending…" : "Send message"}
                   <ArrowUpRight

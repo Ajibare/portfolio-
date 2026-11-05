@@ -33,13 +33,13 @@ export const site = {
 } as const;
 
 export const navItems: NavItem[] = [
-  { label: "Home", href: "#top" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#top" },
+  { label: "Expertise", href: "/#expertise" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 /** Social profiles — real URLs confirmed by the owner's résumé. */

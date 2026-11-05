@@ -31,7 +31,7 @@ interface ButtonAsButton extends BaseProps {
 type ButtonProps = ButtonAsLink | ButtonAsButton;
 
 const variantClasses: Record<Variant, string> = {
-  primary: "bg-accent text-ink hover:bg-paper border border-transparent",
+  primary: "bg-accent text-paper hover:bg-paper hover:text-accent border border-transparent dark:text-ink",
   ghost: "border border-line text-paper hover:border-accent hover:text-accent",
   text: "text-muted hover:text-paper",
 };

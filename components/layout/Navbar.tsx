@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { site, navItems, anchors } from "@/data/site";
@@ -10,20 +11,23 @@ import { cn } from "@/lib/utils";
 import { NavLinks } from "@/components/layout/NavLinks";
 import { Button } from "@/components/ui/Button";
 
+type Theme = "dark" | "light";
+
 export function Navbar() {
   const ready = useSiteReady();
   const reduced = useReducedMotion();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string>("");
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-  const [theme, setTheme] = useState<"dark" | "light">("light");
+  const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
 
-    const initialTheme =
+    const initialTheme: Theme =
       stored === "dark" || stored === "light"
         ? stored
         : window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -37,26 +41,15 @@ export function Navbar() {
   useEffect(() => {
     if (!mounted) return;
     document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.setAttribute("data-theme", theme);
+    document.documentElement.style.colorScheme = theme;
     localStorage.setItem("theme", theme);
+
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute("content", theme === "dark" ? "#050505" : "#ffffff");
+    }
   }, [theme, mounted]);
-
-  const htmlRef = useRef<HTMLHtmlElement>(null);
-
-  useEffect(() => {
-    if (htmlRef.current) {
-      htmlRef.current.setAttribute("data-theme", theme);
-    }
-  }, [theme]);
-
-  useEffect(() => {
-    if (htmlRef.current) {
-      htmlRef.current.setAttribute("data-theme", theme);
-      const meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) {
-        meta.setAttribute("content", theme === "dark" ? "#050505" : "#ffffff");
-      }
-    }
-  }, [theme]);
 
   useEffect(() => {
     if (reduced) return;
@@ -101,17 +94,39 @@ export function Navbar() {
     };
   }, [open]);
 
+  useEffect(() => {
+    const scrollToHash = (hash: string) => {
+      const id = hash.replace(/^#/, "");
+      if (!id) {
+        window.scrollTo(0, 0);
+        return;
+      }
+      const element = document.getElementById(id);
+      if (!element) return;
+      element.scrollIntoView({
+        behavior: reduced ? "auto" : "smooth",
+        block: "start",
+      });
+    };
+
+    const handleHashChange = () => scrollToHash(window.location.hash);
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    if (pathname === "/") {
+      scrollToHash(window.location.hash);
+    }
+
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, [pathname, reduced]);
+
   function close() {
     setOpen(false);
     menuButtonRef.current?.focus();
   }
 
-  useEffect(() => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  }, []);
-
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
   };
 
   const menu = {
@@ -125,7 +140,6 @@ export function Navbar() {
 
   return (
     <header
-      ref={htmlRef}
       className={cn(
         "fixed inset-x-0 top-0 z-[100] transition-all duration-300 motion-reduce:transition-none",
         scrolled && !open && !ready && "border-b border-line bg-ink/85 backdrop-blur-md",
@@ -179,9 +193,9 @@ export function Navbar() {
             className="rounded-full p-2 transition-colors hover:bg-accent/10"
           >
             {theme === "dark" ? (
-              <Sun size={18} aria-hidden />
-            ) : (
               <Moon size={18} aria-hidden />
+            ) : (
+              <Sun size={18} aria-hidden />
             )}
           </button>
         </div>
@@ -212,7 +226,7 @@ export function Navbar() {
                     data-cursor="link"
                     className={cn(
                       "group flex items-baseline gap-4 font-display text-[13vw] font-bold uppercase leading-[1.02] tracking-tight",
-                      active === item.href.slice(1) ? "text-paper" : "text-muted",
+                      active === item.href.split("#")[1] ? "text-paper" : "text-muted",
                     )}
                   >
                     <span className="eyebrow text-xs">0{index + 1}</span>

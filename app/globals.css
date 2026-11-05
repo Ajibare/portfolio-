@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
-@theme inline {
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
   --color-ink: #050505;
   --color-surface: #101010;
   --color-elevated: #161616;
@@ -21,6 +23,31 @@
 :root {
   --gutter: 1.25rem;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+  --color-ink: #ffffff;
+  --color-surface: #ffffff;
+  --color-elevated: #ffffff;
+  --color-line: #e5e5e5;
+  --color-line-soft: #f0f0f0;
+  --color-paper: #111111;
+  --color-muted: #555555;
+  --color-faint: #888888;
+  --color-accent: #a6b92d;
+  --color-accent-dim: #7c8c1f;
+}
+
+.dark {
+  color-scheme: dark;
+  --color-ink: #050505;
+  --color-surface: #101010;
+  --color-elevated: #161616;
+  --color-line: #242424;
+  --color-line-soft: #1a1a1a;
+  --color-paper: #ffffff;
+  --color-muted: #8a8a8a;
+  --color-faint: #555555;
+  --color-accent: #a6b92d;
+  --color-accent-dim: #7c8c1f;
 }
 
 @media (min-width: 768px) {
@@ -41,8 +68,8 @@ body {
 }
 
 body {
-  background: #050505;
-  color: #f5f5f5;
+  background: var(--color-ink);
+  color: var(--color-paper);
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -138,7 +165,7 @@ html.custom-cursor summary {
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #8a8a8a;
+    color: var(--color-muted);
   }
 
   .eyebrow-accent {

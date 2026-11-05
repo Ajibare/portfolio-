@@ -307,7 +307,7 @@ export function BookACall() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group inline-flex w-fit items-center gap-3 border border-accent bg-accent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wide text-ink transition-colors hover:bg-transparent hover:text-accent disabled:cursor-not-allowed disabled:opacity-50"
+              className="group inline-flex w-fit items-center gap-3 border border-accent bg-accent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wide text-paper dark:text-ink transition-colors hover:bg-transparent hover:text-paper disabled:cursor-not-allowed disabled:opacity-50"
             >
               {loading ? "Sending…" : "Book a call"}
               <ArrowUpRight size={16} aria-hidden className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

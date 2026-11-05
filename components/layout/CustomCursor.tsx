@@ -132,7 +132,7 @@ export function CustomCursor() {
             initial={false}
             animate={{ opacity: visible ? 1 : 0, scale: visible ? 1 : 0.6, x: 16, y: 12 }}
             transition={{ type: "spring", stiffness: 340, damping: 26 }}
-            className="flex h-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-accent px-3.5 font-mono text-[10px] font-medium uppercase tracking-[0.15em] text-ink"
+            className="flex h-9 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-accent px-3.5 font-mono text-[10px] font-medium uppercase tracking-[0.15em] text-paper dark:text-ink"
           >
             {label}
           </motion.div>

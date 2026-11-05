@@ -14,7 +14,7 @@ export function NavLinks({ active, onNavigate }: NavLinksProps) {
   return (
     <ul className="flex items-center gap-9">
       {navItems.map((item) => {
-        const id = item.href.replace("#", "");
+        const id = item.href.split("#")[1] ?? "";
         const isActive = active === id;
         return (
           <li key={item.href}>
